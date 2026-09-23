@@ -1,0 +1,50 @@
+{
+  "slug": "apex-web-summit",
+  "cliente": "ApexBrasil",
+  "titulo": "Estande Web Summit Lisboa",
+  "ano": "2026",
+  "local": "LIS",
+  "ordem": 60,
+  "publicado": true,
+  "capa": "",
+  "ficha": [
+    {
+      "rotulo": "Cliente",
+      "valor": "ApexBrasil"
+    },
+    {
+      "rotulo": "Evento",
+      "valor": "Web Summit Lisboa"
+    },
+    {
+      "rotulo": "Função",
+      "valor": "Direção de arte"
+    }
+  ],
+  "resumo": "<p>Estande da ApexBrasil no Web Summit Lisboa, incluindo conceitos de brindes para distribuição.</p><p>Resumo do projeto.</p>",
+  "blocos": [
+    {
+      "tipo": "imagem",
+      "arquivo": "",
+      "legenda": ""
+    },
+    {
+      "tipo": "imagens_lado_a_lado",
+      "arquivos": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "tipo": "texto",
+      "titulo": "Conceito",
+      "corpo": "<p>Texto corrido sobre o processo e as decisões do projeto. Você pode colocar quantos blocos de texto quiser entre as imagens.</p>"
+    },
+    {
+      "tipo": "video",
+      "link": "",
+      "arquivo": ""
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+PORTFÓLIO SAMANTHA ARAÚJO — arquivos do site
+
+index.html            → o "motor" do site (layout). Não precisa mexer.
+build.js              → monta o site no Cloudflare. Não precisa mexer.
+.pages.yml            → configuração do painel (Pages CMS). Não precisa mexer.
+pages-yml-copia.txt   → cópia do .pages.yml, caso ele suma no upload (arquivos com ponto no início ficam ocultos).
+content/site.json     → textos, cores, fontes, contatos e página Sobre (edite pelo painel)
+content/projetos/     → um arquivo por projeto (edite pelo painel)
+media/                → imagens, GIFs e vídeos que você sobe pelo painel
+
+Configuração do Cloudflare Pages:
+  Build command:          node build.js
+  Build output directory: dist
+
+O passo a passo completo está no doc que o Claude te enviou.

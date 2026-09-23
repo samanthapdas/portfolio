@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Samantha Araújo</title>
+<meta name="description" content="Samantha Araújo — designer e diretora de arte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link id="fontes" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;800;900&family=Inter:wght@400;500;600&display=swap">
+<!--
+  ESTE ARQUIVO É O "MOTOR" DO SITE.
+  Pra mudar textos, cores, fontes, imagens e projetos, use o painel (Pages CMS).
+  Só mexa aqui se quiser mudar o layout.
+-->
+<style>
+  :root{
+    --fundo:#0000FF; --texto:#FFFFFF; --texto-suave:#B8B8FF; --linhas:#4D4DFF;
+    --f-titulos:"Inter Tight"; --f-corpo:"Inter";
+    --display:var(--f-titulos),"Helvetica Neue",Arial,sans-serif;
+    --text:var(--f-corpo),"Helvetica Neue",Arial,sans-serif;
+    --gut:clamp(16px,3vw,40px);
+    --cols:4;
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  html{background:var(--fundo)}
+  body{margin:0;background:var(--fundo);color:var(--texto);font-family:var(--text);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased;padding-inline:var(--gut);min-height:100vh;display:flex;flex-direction:column}
+  img,video,iframe{max-width:100%;display:block}
+  a{color:inherit}
+  ::selection{background:var(--texto);color:var(--fundo)}
+  :focus-visible{outline:2px solid var(--texto);outline-offset:3px}
+  #app{flex:1}
+
+  /* menu */
+  .nav{position:sticky;top:0;z-index:10;background:var(--fundo);display:flex;justify-content:space-between;align-items:center;gap:20px;padding-block:24px;flex-wrap:wrap}
+  .logo{font-family:var(--display);font-weight:900;font-size:clamp(20px,2.4vw,30px);letter-spacing:-.02em;line-height:1;text-transform:uppercase;text-decoration:none}
+  .menu{display:flex;align-items:center;gap:clamp(16px,2.4vw,32px)}
+  .menu .lnk{font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding-block:4px;border-bottom:1.5px solid transparent;transition:border-color .2s}
+  .menu .lnk:hover,.menu .lnk[aria-current="page"]{border-bottom-color:var(--texto)}
+  .socials{display:flex;gap:14px;align-items:center}
+  .ico{display:inline-flex;width:20px;height:20px;transition:transform .2s}
+  .ico:hover{transform:translateY(-2px)}
+  .ico svg{width:100%;height:100%;fill:var(--texto)}
+
+  /* home */
+  .hero{padding-block:clamp(72px,16vh,170px) clamp(56px,10vh,110px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(40px,8vh,90px)}
+  .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(28px,4.8vw,64px);line-height:1.05;letter-spacing:-.025em;margin:0;max-width:22ch;text-wrap:balance}
+  .arrow{display:inline-flex;width:28px;height:28px;align-items:center;justify-content:center;animation:bob 1.8s ease-in-out infinite}
+  .arrow svg{width:14px;height:14px;fill:var(--texto)}
+  @keyframes bob{50%{transform:translateY(6px)}}
+  .work{columns:var(--cols);column-gap:14px;padding-block:8px 100px;scroll-margin-top:90px}
+  .card{break-inside:avoid;margin:0 0 22px;display:block;text-decoration:none}
+  .thumb{position:relative;overflow:hidden;background:var(--linhas)}
+  .thumb img,.thumb video{width:100%;height:auto;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+  .thumb .ph{aspect-ratio:var(--r,4/5);display:grid;place-items:center;padding:16px;text-align:center;font-family:var(--display);font-weight:800;font-size:clamp(18px,2vw,28px);letter-spacing:-.02em;line-height:1;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+  .card:hover .thumb>*:not(.tag),.card:focus-visible .thumb>*:not(.tag){transform:scale(1.045)}
+  .tag{position:absolute;left:10px;bottom:10px;font-family:var(--display);font-weight:800;font-size:clamp(18px,1.8vw,26px);line-height:.95;letter-spacing:-.02em;color:#fff;mix-blend-mode:difference;max-width:80%;opacity:0;transform:translateY(6px);transition:.35s ease}
+  .card:hover .tag,.card:focus-visible .tag{opacity:1;transform:none}
+  .cap{display:flex;justify-content:space-between;gap:12px;padding-top:7px;font-size:11px;line-height:1.3}
+  .cap b{display:block;font-weight:600}
+  .cap span,.cap time{color:var(--texto-suave)}
+
+  /* projeto */
+  .ficha{display:grid;grid-template-columns:1fr 1fr 1.5fr;gap:clamp(20px,3vw,48px);padding-block:clamp(28px,5vh,56px) clamp(28px,5vh,48px);font-size:13px;line-height:1.45}
+  .ficha h1{font-family:var(--display);font-weight:800;font-size:clamp(26px,3vw,40px);line-height:1;letter-spacing:-.02em;margin:0 0 22px;text-wrap:balance}
+  .ficha dl{margin:0;display:grid;gap:14px}
+  .ficha dt,.credits dt{color:var(--texto-suave);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+  .ficha dd{margin:0}
+  .rich p{margin:0 0 12px;max-width:62ch}
+  .rich a{text-underline-offset:3px}
+  .blocks{display:grid;gap:14px;padding-bottom:80px}
+  .media{position:relative;overflow:hidden;background:var(--linhas)}
+  .media img,.media video{width:100%;height:auto}
+  .media .ph{aspect-ratio:16/9;display:grid;place-items:center;color:var(--texto-suave);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+  .media figcaption{font-size:11px;color:var(--texto-suave);padding-top:6px}
+  figure{margin:0}
+  .embed{position:relative;aspect-ratio:16/9;background:#000}
+  .embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .row{display:grid;gap:14px;grid-template-columns:repeat(var(--n),1fr);align-items:start}
+  .prose{display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(20px,3vw,48px);padding-block:clamp(28px,6vh,64px)}
+  .prose h2{font-family:var(--display);font-weight:800;font-size:clamp(20px,2vw,28px);letter-spacing:-.02em;line-height:1.05;margin:0}
+  .prose .rich p{font-size:15px;line-height:1.55}
+  .pager{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--linhas);padding-block:28px 64px}
+  .pager a{text-decoration:none;display:grid;gap:4px;max-width:45%}
+  .pager a:last-child{text-align:right}
+  .pager small{color:var(--texto-suave);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+  .pager b{font-family:var(--display);font-weight:800;font-size:clamp(18px,2.2vw,30px);letter-spacing:-.02em;line-height:1}
+  .pager a:hover b{text-decoration:underline;text-underline-offset:5px}
+
+  /* sobre */
+  .about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr) minmax(0,.9fr) minmax(0,.9fr);gap:clamp(20px,3vw,44px);padding-block:clamp(28px,5vh,56px) 100px;font-size:13px;line-height:1.5;align-items:start}
+  .photo{aspect-ratio:4/5;width:100%;background:var(--linhas);display:grid;place-items:center;overflow:hidden}
+  .photo img{width:100%;height:100%;object-fit:cover}
+  .photo span{font-family:var(--display);font-weight:900;font-size:clamp(56px,7vw,110px);letter-spacing:-.04em}
+  .about .socials{margin-top:16px}
+  .about .socials .ico{width:24px;height:24px}
+  .about h1{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.2vw,30px);letter-spacing:-.02em;line-height:1.05;margin:0 0 14px}
+  .about h2{font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
+  .about ul{list-style:none;margin:0 0 26px;padding:0}
+  .about li{color:var(--texto-suave)}
+  .about .sel{user-select:all}
+
+  /* rodapé */
+  .foot{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-top:1px solid var(--linhas);padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));font-family:var(--display);font-weight:800;font-size:clamp(20px,3vw,40px);letter-spacing:-.02em;line-height:1;text-transform:uppercase}
+  .foot a{text-decoration:none}
+
+  .anim .page{animation:in .5s ease both}
+  @keyframes in{from{opacity:.001;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .loading{padding-block:30vh;text-align:center;color:var(--texto-suave)}
+
+  @media (max-width:1000px){.work{columns:min(var(--cols),3)}.about{grid-template-columns:1fr 1.4fr}}
+  @media (max-width:760px){
+    .work{columns:2;column-gap:10px}
+    .tag{opacity:1;transform:none}
+    .ficha,.prose{grid-template-columns:1fr}
+    .row{grid-template-columns:repeat(min(var(--n),2),1fr)}
+    .about{grid-template-columns:1fr 1fr}
+    .about .col-photo,.about .col-bio{grid-column:1/-1}
+    .about .col-photo{max-width:320px}
+  }
+  @media (max-width:480px){
+    .work{columns:1}
+    .row{grid-template-columns:1fr}
+    .about{grid-template-columns:1fr}
+    .menu{width:100%;justify-content:space-between}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Principal">
+  <a class="logo" href="/" data-nome>Samantha Araújo</a>
+  <div class="menu">
+    <a class="lnk" href="/" data-nav="inicio">Projetos</a>
+    <a class="lnk" href="/sobre" data-nav="sobre">Sobre</a>
+    <div class="socials" data-socials></div>
+  </div>
+</nav>
+
+<div id="app"><p class="loading">Carregando…</p></div>
+
+<footer class="foot">
+  <a href="/" data-nome>Samantha Araújo</a>
+  <span data-ano>/ 2026</span>
+</footer>
+
+<script>
+const ICONS = {
+  whatsapp:'<path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/>',
+  instagram:'<path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM16.5 2h-9A5.5 5.5 0 0 0 2 7.5v9A5.5 5.5 0 0 0 7.5 22h9a5.5 5.5 0 0 0 5.5-5.5v-9A5.5 5.5 0 0 0 16.5 2zm3.7 14.5a3.7 3.7 0 0 1-3.7 3.7h-9a3.7 3.7 0 0 1-3.7-3.7v-9a3.7 3.7 0 0 1 3.7-3.7h9a3.7 3.7 0 0 1 3.7 3.7z"/>',
+  behance:'<path d="M8.2 11.4c.9-.4 1.4-1.1 1.4-2.2C9.6 7 8 6 6 6H1v12h5.2c2.1 0 4-1 4-3.4 0-1.5-.7-2.6-2-3.2zM3.3 8h2.3c.9 0 1.6.3 1.6 1.2 0 .9-.6 1.3-1.5 1.3H3.3zm2.5 8H3.3v-3.3h2.6c1 0 1.7.4 1.7 1.6 0 1.2-.8 1.7-1.8 1.7zM15.5 6.8h5V8h-5zM18 9.4c-2.7 0-4.4 2-4.4 4.5 0 2.7 1.6 4.5 4.4 4.5 2 0 3.4-.9 4-2.9h-2.2c-.2.7-1 1.1-1.8 1.1-1.3 0-2-.7-2-2h6.1c.2-2.8-1.3-5.2-4.1-5.2zm-2 3.8c.1-1.1.8-1.8 1.9-1.8 1.2 0 1.7.7 1.8 1.8z"/>',
+  linkedin:'<path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/>'
+};
+const REDES = [["whatsapp","WhatsApp","whatsapp_link"],["instagram","Instagram","instagram"],["behance","Behance","behance"],["linkedin","LinkedIn","linkedin"]];
+const CORES_PH = ["#FF5A1F","#FFD23F","#1FB6FF","#FF2E88","#00C2A8","#111111","#009B3A","#74ACDF","#F39200","#7A1FA2","#C9B79C","#E4FF00"];
+const RATIOS = ["4/5","4/3","1/1","3/4"];
+
+let SITE = null, PROJETOS = [];
+const $app = document.getElementById("app");
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const isVideo = f => /\.(mp4|webm|mov)(\?|$)/i.test(f || "");
+const rich = t => !t ? "" : /<[a-z]/i.test(t) ? t : t.split(/\n\s*\n/).map(p => `<p>${esc(p).replace(/\n/g,"<br>")}</p>`).join("");
+
+function midia(arquivo, alt = "", classe = "") {
+  if (!arquivo) return "";
+  return isVideo(arquivo)
+    ? `<video class="${classe}" src="${esc(arquivo)}" autoplay muted loop playsinline preload="metadata"></video>`
+    : `<img class="${classe}" src="${esc(arquivo)}" alt="${esc(alt)}" loading="lazy">`;
+}
+
+function embed(link) {
+  if (!link) return "";
+  let m = link.match(/(?:youtube\.com\/(?:watch\?v=|shorts\/|embed\/)|youtu\.be\/)([\w-]{6,})/);
+  if (m) return `<div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/${m[1]}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy" title="Vídeo"></iframe></div>`;
+  m = link.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+  if (m) return `<div class="embed"><iframe src="https://player.vimeo.com/video/${m[1]}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="Vídeo"></iframe></div>`;
+  if (isVideo(link)) return `<video src="${esc(link)}" controls playsinline preload="metadata"></video>`;
+  return "";
+}
+
+function aplicarConfig() {
+  const c = SITE.cores || {}, r = document.documentElement.style;
+  if (c.fundo) r.setProperty("--fundo", c.fundo);
+  if (c.texto) r.setProperty("--texto", c.texto);
+  if (c.texto_suave) r.setProperty("--texto-suave", c.texto_suave);
+  if (c.linhas) r.setProperty("--linhas", c.linhas);
+  const f = SITE.fontes || {};
+  const tit = (f.titulos || "Inter Tight").trim(), corpo = (f.corpo || "Inter").trim();
+  r.setProperty("--f-titulos", `"${tit}"`); r.setProperty("--f-corpo", `"${corpo}"`);
+  const fam = n => "family=" + encodeURIComponent(n).replace(/%20/g, "+") + ":wght@400;500;600;700;800;900";
+  document.getElementById("fontes").href = `https://fonts.googleapis.com/css2?${fam(tit)}${corpo !== tit ? "&" + fam(corpo) : ""}&display=swap`;
+  r.setProperty("--cols", SITE.grid?.colunas || 4);
+  document.body.classList.toggle("anim", SITE.grid?.animacoes !== false);
+  document.querySelectorAll("[data-nome]").forEach(e => e.textContent = SITE.nome || "");
+  document.querySelector("[data-ano]").textContent = "/ " + (SITE.ano_rodape || new Date().getFullYear());
+  document.querySelector('meta[name="description"]').content = SITE.descricao_google || "";
+  document.querySelectorAll("[data-socials]").forEach(e => e.innerHTML = socials());
+}
+
+function socials() {
+  const c = SITE.contato || {};
+  return REDES.filter(([, , k]) => c[k]).map(([ic, nome, k]) =>
+    `<a class="ico" href="${esc(c[k])}" target="_blank" rel="noopener" aria-label="${nome}" title="${nome}"><svg viewBox="0 0 24 24">${ICONS[ic]}</svg></a>`).join("");
+}
+
+function capa(p, i) {
+  if (p.capa) return midia(p.capa, p.cliente);
+  return `<div class="ph" style="--r:${RATIOS[i % 4]};background:${CORES_PH[i % CORES_PH.length]}">${esc(p.cliente)}</div>`;
+}
+
+function home() {
+  return `<div class="page">
+    <section class="hero">
+      <h1>${esc(SITE.hero)}</h1>
+      <a class="arrow" href="#trabalhos" aria-label="Ver projetos"><svg viewBox="0 0 14 14"><path d="M1 1h12L7 7zM1 7h12l-6 6z"/></svg></a>
+    </section>
+    <main class="work" id="trabalhos">
+      ${PROJETOS.map((p, i) => `
+        <a class="card" href="/projetos/${esc(p.slug)}">
+          <div class="thumb">${capa(p, i)}<div class="tag">${esc(p.titulo)}</div></div>
+          <div class="cap"><div><b>${esc(p.cliente)}</b><span>${esc(p.titulo)}</span></div><time>${esc(p.ano)}</time></div>
+        </a>`).join("")}
+    </main></div>`;
+}
+
+function bloco(b) {
+  const t = b.tipo || b._block;
+  if (t === "imagem") return b.arquivo
+    ? `<figure class="media">${midia(b.arquivo, b.legenda)}${b.legenda ? `<figcaption>${esc(b.legenda)}</figcaption>` : ""}</figure>`
+    : `<div class="media"><div class="ph">Imagem</div></div>`;
+  if (t === "imagens_lado_a_lado") {
+    const arr = (b.arquivos || []);
+    return `<div class="row" style="--n:${Math.min(Math.max(arr.length,1),4)}">${arr.map(a => a
+      ? `<div class="media">${midia(a)}</div>` : `<div class="media"><div class="ph" style="aspect-ratio:4/5">Imagem</div></div>`).join("")}</div>`;
+  }
+  if (t === "texto") return `<div class="prose"><h2>${esc(b.titulo)}</h2><div class="rich">${rich(b.corpo)}</div></div>`;
+  if (t === "video") return embed(b.link) || (b.arquivo ? `<div class="media">${midia(b.arquivo)}</div>`.replace("autoplay muted loop", "controls") : `<div class="media"><div class="ph">Vídeo</div></div>`);
+  return "";
+}
+
+function projeto(p) {
+  const i = PROJETOS.indexOf(p), n = PROJETOS.length;
+  const prev = PROJETOS[(i - 1 + n) % n], next = PROJETOS[(i + 1) % n];
+  const f = p.ficha || [], meio = Math.ceil(f.length / 2);
+  const dl = arr => `<dl>${arr.map(x => `<div><dt>${esc(x.rotulo)}</dt><dd>${esc(x.valor)}</dd></div>`).join("")}</dl>`;
+  return `<article class="page">
+    <header class="ficha">
+      <div><h1>${esc(p.cliente)} — ${esc(p.titulo)}</h1>${dl(f.slice(0, meio))}</div>
+      <div>${dl([{rotulo:"Ano", valor:`${p.ano || ""}${p.local ? ` ( ${p.local} )` : ""}`}, ...f.slice(meio)])}</div>
+      <div class="rich">${rich(p.resumo)}</div>
+    </header>
+    <div class="blocks">${(p.blocos || []).map(bloco).join("")}</div>
+    ${n > 1 ? `<nav class="pager" aria-label="Outros projetos">
+      <a href="/projetos/${esc(prev.slug)}"><small>← Anterior</small><b>${esc(prev.cliente)}</b></a>
+      <a href="/projetos/${esc(next.slug)}"><small>Próximo →</small><b>${esc(next.cliente)}</b></a>
+    </nav>` : ""}
+  </article>`;
+}
+
+function sobre() {
+  const s = SITE.sobre || {}, c = SITE.contato || {};
+  const listas = s.listas || [];
+  const metade = Math.ceil(listas.length / 2);
+  const lista = l => `<h2>${esc(l.titulo)}</h2><ul>${(l.itens || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul>`;
+  return `<section class="about page">
+    <div class="col-photo">
+      <div class="photo">${s.foto ? `<img src="${esc(s.foto)}" alt="${esc(SITE.nome)}">` : `<span>${esc((SITE.nome||"").split(" ").map(w=>w[0]).join("").slice(0,2))}</span>`}</div>
+      <div class="socials">${socials()}</div>
+    </div>
+    <div class="col-bio"><h1>${esc(s.titulo)}</h1><div class="rich">${rich(s.texto)}</div></div>
+    <div class="col-exp">${listas.slice(0, metade).map(lista).join("")}</div>
+    <div class="col-cont">
+      <h2>Contato</h2><ul>${c.email ? `<li class="sel">${esc(c.email)}</li>` : ""}${c.whatsapp_numero ? `<li class="sel">${esc(c.whatsapp_numero)}</li>` : ""}</ul>
+      ${listas.slice(metade).map(lista).join("")}
+    </div>
+  </section>`;
+}
+
+function render() {
+  const path = location.pathname.replace(/\/+$/, "") || "/";
+  let rota = "inicio";
+  const m = path.match(/^\/projetos\/([^/]+)$/);
+  const p = m && PROJETOS.find(x => x.slug === decodeURIComponent(m[1]));
+  if (path === "/sobre") { $app.innerHTML = sobre(); rota = "sobre"; document.title = `Sobre · ${SITE.nome}`; }
+  else if (p) { $app.innerHTML = projeto(p); rota = "projeto"; document.title = `${p.cliente} — ${p.titulo} · ${SITE.nome}`; }
+  else { $app.innerHTML = home(); document.title = SITE.nome; }
+  document.querySelectorAll("[data-nav]").forEach(a => {
+    const on = a.dataset.nav === rota || (rota === "projeto" && a.dataset.nav === "inicio");
+    on ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current");
+  });
+}
+
+function ir(url, trocarHistorico) {
+  const u = new URL(url, location.href);
+  if (u.hash === "#trabalhos" && (u.pathname === "/" || u.pathname === "")) {
+    if (location.pathname !== "/") { history.pushState(null, "", "/"); render(); }
+    requestAnimationFrame(() => document.getElementById("trabalhos")?.scrollIntoView({behavior:"smooth"}));
+    return;
+  }
+  trocarHistorico ? history.replaceState(null, "", u.pathname) : history.pushState(null, "", u.pathname);
+  render(); window.scrollTo(0, 0);
+}
+
+document.addEventListener("click", e => {
+  const a = e.target.closest("a");
+  if (!a || a.target === "_blank" || e.metaKey || e.ctrlKey || e.shiftKey) return;
+  const u = new URL(a.href, location.href);
+  if (u.origin !== location.origin) return;
+  e.preventDefault(); ir(a.href);
+});
+window.addEventListener("popstate", render);
+
+(async () => {
+  try {
+    const [s, p] = await Promise.all([
+      fetch("/content/site.json", {cache:"no-cache"}).then(r => r.json()),
+      fetch("/content/projetos.json", {cache:"no-cache"}).then(r => r.json())
+    ]);
+    SITE = s; PROJETOS = p;
+    aplicarConfig(); render();
+  } catch (err) {
+    $app.innerHTML = `<p class="loading">Não consegui carregar o conteúdo do site. Confira se o build rodou no Cloudflare.</p>`;
+    console.error(err);
+  }
+})();
+</script>
+</body>
+</html>

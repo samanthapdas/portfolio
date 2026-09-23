@@ -1,0 +1,50 @@
+{
+  "slug": "na-praia",
+  "cliente": "Na Praia Festival",
+  "titulo": "Ecocopos 2026",
+  "ano": "2026",
+  "local": "BSB",
+  "ordem": 10,
+  "publicado": true,
+  "capa": "",
+  "ficha": [
+    {
+      "rotulo": "Cliente",
+      "valor": "Na Praia Festival"
+    },
+    {
+      "rotulo": "Entregas",
+      "valor": "Ecocopos oficiais e de patrocinadores"
+    },
+    {
+      "rotulo": "Função",
+      "valor": "Direção de arte e design"
+    }
+  ],
+  "resumo": "<p>Linha de ecocopos do Na Praia Festival 2026 — o maior festival Zero Waste do mundo. O copo é o souvenir que o público leva pra casa, então ele precisava carregar a identidade inteira do festival.</p><p>O conceito parte da arquitetura de Ilha do Ferro (AL): platibandas escalonadas, peixes ornamentais, estrelas e geometrias que viraram um sistema aplicado aos copos institucionais e de marcas como Heineken, Coca-Cola e Red Bull.</p>",
+  "blocos": [
+    {
+      "tipo": "imagem",
+      "arquivo": "",
+      "legenda": ""
+    },
+    {
+      "tipo": "imagens_lado_a_lado",
+      "arquivos": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "tipo": "texto",
+      "titulo": "Conceito",
+      "corpo": "<p>Texto corrido sobre o processo e as decisões do projeto. Você pode colocar quantos blocos de texto quiser entre as imagens.</p>"
+    },
+    {
+      "tipo": "video",
+      "link": "",
+      "arquivo": ""
+    }
+  ]
+}
