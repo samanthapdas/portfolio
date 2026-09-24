@@ -2,7 +2,7 @@
   "nome": "Samantha Araújo",
   "ano_rodape": "2026",
   "descricao_google": "Samantha Araújo — designer e diretora de arte especialista em identidade visual, comunicação para eventos, festivais e projetos culturais. Brasília.",
-  "hero": "Samantha Araújo, designer e diretora de arte especialista em identidade visual, comunicação para eventos, festivais e projetos culturais.",
+  "hero": "Designer e diretora de arte especialista em identidade visual, comunicação para eventos, festivais e projetos culturais.",
   "cores": {
     "fundo": "#0000FF",
     "texto": "#FFFFFF",
@@ -27,12 +27,39 @@
   },
   "sobre": {
     "titulo": "Oi, prazer!",
-    "foto": "",
-    "texto": "<p>Eu sou a Samantha, designer e diretora de arte em Brasília, com mais de 9 anos criando pra marca, campanha e — principalmente — pra festa.</p><p>Passei 4 anos numa produtora de eventos focada em festivais de música, e foi lá que eu entendi que identidade de festival não vive só no Instagram: ela vive no copo, na pulseira, na placa do banheiro e na foto que o público posta no dia seguinte.</p><p>Hoje sou Art Director na Binder, cuidando de campanhas digitais always-on e concorrências pra CAIXA. Em paralelo, sigo no freela com eventos, festivais e projetos culturais, que é onde meu coração mora.</p><p>Quero levar esse olhar pra projetos no Brasil todo e lá fora. Se você tem um festival, bora conversar.</p>",
+    "texto": "Eu sou a Samantha, designer e diretora de arte em Brasília, com mais de 9 anos criando pra marca, campanha e — principalmente — pra festa.\n\nPassei 4 anos numa produtora de eventos focada em festivais de música, e foi lá que eu entendi que identidade de festival não vive só no Instagram: ela vive no copo, na pulseira, na placa do banheiro e na foto que o público posta no dia seguinte.\n\nHoje sou Art Director na Binder, cuidando de campanhas digitais always-on e concorrências pra CAIXA. Em paralelo, sigo no freela com eventos, festivais e projetos culturais, que é onde meu coração mora.\n\nQuero levar esse olhar pra projetos no Brasil todo e lá fora. Se você tem um festival, bora conversar.",
     "listas": [
-      { "titulo": "Experiência", "itens": ["Binder Agency (atualmente)", "Freela · eventos e festivais", "Produtora de eventos · Brasília", "Agências · design institucional"] },
-      { "titulo": "Faço", "itens": ["Identidade visual", "Comunicação para eventos", "Festivais e projetos culturais", "Direção de arte de campanha", "Ativações e brindes"] },
-      { "titulo": "Clientes", "itens": ["CAIXA", "ApexBrasil", "EMBRATUR", "Banco do Brasil", "Na Praia Festival", "Festival MESKLA", "Carnaval do Mané"] }
+      {
+        "titulo": "Experiência",
+        "itens": [
+          "Binder Agency (atualmente)",
+          "Freela · eventos e festivais",
+          "Produtora de eventos · Brasília",
+          "Agências · design institucional"
+        ]
+      },
+      {
+        "titulo": "Faço",
+        "itens": [
+          "Identidade visual",
+          "Comunicação para eventos",
+          "Festivais e projetos culturais",
+          "Direção de arte de campanha",
+          "Ativações e brindes"
+        ]
+      },
+      {
+        "titulo": "Clientes",
+        "itens": [
+          "CAIXA",
+          "ApexBrasil",
+          "EMBRATUR",
+          "Banco do Brasil",
+          "Na Praia Festival",
+          "Festival MESKLA",
+          "Carnaval do Mané"
+        ]
+      }
     ]
   }
 }
