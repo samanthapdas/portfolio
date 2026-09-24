@@ -90,7 +90,8 @@
     },
     {
       "tipo": "texto",
-      "titulo": "Direção Criativa: Isadora TupinambáDireção de Arte: Samantha Araújo e Isadora Tupinambá"
+      "corpo": "Direção Criativa: Isadora Tupinambá  \nDireção de Arte: Samantha Araújo e Isadora Tupinambá",
+      "corpo_en": "Creative direction: Isadora Tupinambá    \nArt Direction: Samantha Araújo e Isadora Tupinambá"
     }
   ]
 }
