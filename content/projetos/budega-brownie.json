@@ -1,6 +1,7 @@
 {
   "cliente": "BUDEGA BROWNIE",
-  "titulo": "Packaging",
+  "titulo": "Embalagem",
+  "titulo_en": "Packaging",
   "slug": "budega-brownie",
   "ano": "2023",
   "local": "Teresina",
@@ -8,6 +9,18 @@
   "publicado": true,
   "capa": "/media/capa.png",
   "ficha": [
-    {}
-  ]
+    {
+      "rotulo": "Função",
+      "rotulo_en": "Role",
+      "valor": "Direção de arte",
+      "valor_en": "Art Direction"
+    },
+    {
+      "rotulo": "Entregas",
+      "rotulo_en": "Deliverables",
+      "valor": "Identidade visual e embalagens",
+      "valor_en": "Visual identity and packaging"
+    }
+  ],
+  "resumo": "A campanha de Natal de 2023 da Budega Brownie — doceria original de Teresina, PI — combinava em seu conceito a magia do Quebra-Nozes com a brasilidade de seus doces. Todos os produtos da campanha levavam em seu recheio ingredientes tradicionais da região. \n\nO resultado da identidade foi uma reinterpretação do clássico natalino em uma paleta vibrante e de estampas variadas. Cada produto ganhou um formato especial para sua embalagem: para o “brownetone”, uma caixa que se abria e revelava o grande presente; os mini papais Noéis, dispostos dentro de uma caixa triangular simbolizando a árvore de Natal; e os tabletes de chocolate, por fim, envolvidos cada um em uma estampa natalina e apareciam na caixa por meio de janelas-árvore vazadas."
 }
