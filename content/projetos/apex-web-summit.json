@@ -1,12 +1,11 @@
 {
-  "slug": "apex-web-summit",
   "cliente": "ApexBrasil",
   "titulo": "Estande Web Summit Lisboa",
+  "slug": "apex-web-summit",
   "ano": "2026",
   "local": "LIS",
   "ordem": 60,
-  "publicado": true,
-  "capa": "",
+  "publicado": false,
   "ficha": [
     {
       "rotulo": "Cliente",
@@ -21,30 +20,21 @@
       "valor": "Direção de arte"
     }
   ],
-  "resumo": "<p>Estande da ApexBrasil no Web Summit Lisboa, incluindo conceitos de brindes para distribuição.</p><p>Resumo do projeto.</p>",
+  "resumo": "Estande da ApexBrasil no Web Summit Lisboa, incluindo conceitos de brindes para distribuição.\n\nResumo do projeto.",
   "blocos": [
     {
-      "tipo": "imagem",
-      "arquivo": "",
-      "legenda": ""
+      "tipo": "imagem"
     },
     {
-      "tipo": "imagens_lado_a_lado",
-      "arquivos": [
-        "",
-        "",
-        ""
-      ]
+      "tipo": "imagens_lado_a_lado"
     },
     {
       "tipo": "texto",
       "titulo": "Conceito",
-      "corpo": "<p>Texto corrido sobre o processo e as decisões do projeto. Você pode colocar quantos blocos de texto quiser entre as imagens.</p>"
+      "corpo": "Texto corrido sobre o processo e as decisões do projeto. Você pode colocar quantos blocos de texto quiser entre as imagens."
     },
     {
-      "tipo": "video",
-      "link": "",
-      "arquivo": ""
+      "tipo": "video"
     }
   ]
 }
