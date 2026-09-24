@@ -22,5 +22,96 @@
     }
   ],
   "resumo": "A IS.ECO é uma consultoria que ajuda empresas a adotar práticas sustentáveis, alinhadas aos ODSs da ONU. O desafio era tirar a sustentabilidade do discurso sério e deixá-la acessível e bem-humorada.\n\nA identidade brinca com tons naturais e vibrantes, passeia por um sistema de ícones que traduz os temas da consultoria e se desdobra em selos de certificação. Nas aplicações, ousadia e irreverência ocupam as frases e ilustrações, em uma sustentabilidade que dá vontade de vestir e compartilhar.",
-  "resumo_en": "IS.ECO is a consultancy that helps companies adopt sustainable practices aligned with the UN SDGs. The challenge was to take sustainability out of its serious tone and make it accessible and easygoing.\n\nThe identity plays with natural and vibrant tones, moves through an icon system that translates the consultancy's core themes and unfolds into certification badges. Across applications, boldness and irreverence take over the copy and illustrations, shaping a kind of sustainability you want to wear and share."
+  "resumo_en": "IS.ECO is a consultancy that helps companies adopt sustainable practices aligned with the UN SDGs. The challenge was to take sustainability out of its serious tone and make it accessible and easygoing.\n\nThe identity plays with natural and vibrant tones, moves through an icon system that translates the consultancy's core themes and unfolds into certification badges. Across applications, boldness and irreverence take over the copy and illustrations, shaping a kind of sustainability you want to wear and share.",
+  "blocos": [
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/01-1.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/02.gif"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/03.png"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/04.png"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/05.png"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/06.gif"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/07-2.png"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/08.png"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/09-1.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/10.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/11.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/12.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/13.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/14.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/15.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/16.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/17.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/18.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/19.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/20.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/21.jpg"
+    },
+    {
+      "tipo": "texto",
+      "corpo": "**Direção Criativa:** Isadora Tupinambá  \n**Direção de Arte:** Samantha Araújo e Isadora Tupinambá",
+      "corpo_en": "**Creative Direction:** Isadora Tupinambá    \n**Art Direction:** Samantha Araújo e Isadora Tupinambá"
+    }
+  ]
 }
