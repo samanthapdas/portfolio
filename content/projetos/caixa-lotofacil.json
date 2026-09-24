@@ -1,12 +1,11 @@
 {
-  "slug": "caixa-lotofacil",
   "cliente": "CAIXA",
   "titulo": "Lotofácil da Independência",
+  "slug": "caixa-lotofacil",
   "ano": "2026",
   "local": "BSB",
   "ordem": 20,
-  "publicado": true,
-  "capa": "",
+  "publicado": false,
   "ficha": [
     {
       "rotulo": "Cliente",
@@ -21,30 +20,21 @@
       "valor": "Direção de arte"
     }
   ],
-  "resumo": "<p>Campanha digital da Lotofácil da Independência, um dos concursos especiais mais aguardados do ano.</p><p>Resumo do desafio, da ideia e dos resultados.</p>",
+  "resumo": "Campanha digital da Lotofácil da Independência, um dos concursos especiais mais aguardados do ano.\n\nResumo do desafio, da ideia e dos resultados.",
   "blocos": [
     {
-      "tipo": "imagem",
-      "arquivo": "",
-      "legenda": ""
+      "tipo": "imagem"
     },
     {
-      "tipo": "imagens_lado_a_lado",
-      "arquivos": [
-        "",
-        "",
-        ""
-      ]
+      "tipo": "imagens_lado_a_lado"
     },
     {
       "tipo": "texto",
       "titulo": "Conceito",
-      "corpo": "<p>Texto corrido sobre o processo e as decisões do projeto. Você pode colocar quantos blocos de texto quiser entre as imagens.</p>"
+      "corpo": "Texto corrido sobre o processo e as decisões do projeto. Você pode colocar quantos blocos de texto quiser entre as imagens."
     },
     {
-      "tipo": "video",
-      "link": "",
-      "arquivo": ""
+      "tipo": "video"
     }
   ]
 }
