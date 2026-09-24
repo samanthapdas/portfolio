@@ -14,7 +14,7 @@ if (fs.existsSync("media")) fs.cpSync("media", path.join(out, "media"), { recurs
 for (const f of ["favicon.ico", "favicon.png", "favicon.svg"]) if (fs.existsSync(f)) fs.copyFileSync(f, path.join(out, f));
 
 const dir = "content/projetos";
-const projetos = fs.readdirSync(dir)
+const projetos = (fs.existsSync(dir) ? fs.readdirSync(dir) : [])
   .filter(f => f.endsWith(".json"))
   .map(f => {
     try {

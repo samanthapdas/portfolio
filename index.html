@@ -43,6 +43,11 @@
   .ico:hover{transform:translateY(-2px)}
   .ico svg{width:100%;height:100%;fill:var(--texto)}
 
+  .langs{display:flex;gap:10px;font-size:12px;font-weight:600;letter-spacing:.06em}
+  .langs a{text-decoration:none;color:var(--texto-suave);padding-block:4px;border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s}
+  .langs a:hover{color:var(--texto)}
+  .langs a[aria-current]{color:var(--texto);border-bottom-color:var(--texto)}
+
   /* home */
   .hero{padding-block:clamp(72px,16vh,170px) clamp(56px,10vh,110px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(40px,8vh,90px)}
   .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(28px,4.8vw,64px);line-height:1.05;letter-spacing:-.025em;margin:0;max-width:22ch;text-wrap:balance}
@@ -102,7 +107,7 @@
   .about .sel{user-select:all}
 
   /* rodapé */
-  .foot{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-top:1px solid var(--linhas);padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));font-family:var(--display);font-weight:800;font-size:clamp(20px,3vw,40px);letter-spacing:-.02em;line-height:1;text-transform:uppercase}
+  .foot{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-top:1px solid var(--linhas);padding-block:18px calc(18px + env(safe-area-inset-bottom,0px));font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.06em;line-height:1;text-transform:uppercase}
   .foot a{text-decoration:none}
 
   .anim .page{animation:in .5s ease both}
@@ -135,6 +140,7 @@
     <a class="lnk" href="/" data-nav="inicio">Projetos</a>
     <a class="lnk" href="/sobre" data-nav="sobre">Sobre</a>
     <div class="socials" data-socials></div>
+    <div class="langs" aria-label="Idioma / Language"><a href="/" data-lang="pt" lang="pt-BR">PT</a><a href="/en" data-lang="en" lang="en">EN</a></div>
   </div>
 </nav>
 
@@ -156,11 +162,41 @@ const REDES = [["whatsapp","WhatsApp","whatsapp_link"],["instagram","Instagram",
 const CORES_PH = ["#FF5A1F","#FFD23F","#1FB6FF","#FF2E88","#00C2A8","#111111","#009B3A","#74ACDF","#F39200","#7A1FA2","#C9B79C","#E4FF00"];
 const RATIOS = ["4/5","4/3","1/1","3/4"];
 
-let SITE = null, PROJETOS = [];
+let SITE = null, PROJETOS = [], LANG = "pt";
 const $app = document.getElementById("app");
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const isVideo = f => /\.(mp4|webm|mov)(\?|$)/i.test(f || "");
 const rich = t => !t ? "" : /<[a-z]/i.test(t) ? t : t.split(/\n\s*\n/).map(p => `<p>${esc(p).replace(/\n/g,"<br>")}</p>`).join("");
+
+/* ---------- idiomas ---------- */
+const UI = {
+  pt: { projetos:"Projetos", sobre:"Sobre", anterior:"← Anterior", proximo:"Próximo →", ano:"Ano", contato:"Contato", ver:"Ver projetos", outros:"Outros projetos", imagem:"Imagem", video:"Vídeo" },
+  en: { projetos:"Projects", sobre:"About", anterior:"← Previous", proximo:"Next →", ano:"Year", contato:"Contact", ver:"See projects", outros:"More projects", imagem:"Image", video:"Video" }
+};
+const ui = k => UI[LANG][k];
+// Pega o campo em inglês (campo_en) quando estiver no EN e ele estiver preenchido; senão usa o português.
+function tr(obj, campo) {
+  if (!obj) return "";
+  if (LANG === "en") {
+    const v = obj[campo + "_en"];
+    if (Array.isArray(v) ? v.length : (v && String(v).replace(/<[^>]*>/g, "").trim())) return v;
+  }
+  return obj[campo];
+}
+const url = {
+  home: l => (l || LANG) === "en" ? "/en" : "/",
+  sobre: l => (l || LANG) === "en" ? "/en/about" : "/sobre",
+  projeto: (slug, l) => ((l || LANG) === "en" ? "/en/projects/" : "/projetos/") + encodeURIComponent(slug)
+};
+function lerRota() {
+  let p = location.pathname.replace(/\/+$/, "") || "/";
+  let lang = "pt";
+  if (p === "/en" || p.startsWith("/en/")) { lang = "en"; p = p.slice(3) || "/"; }
+  if (p === "/sobre" || p === "/about") return { lang, pagina: "sobre" };
+  const m = p.match(/^\/(?:projetos|projects)\/([^/]+)$/);
+  if (m) return { lang, pagina: "projeto", slug: decodeURIComponent(m[1]) };
+  return { lang, pagina: "inicio" };
+}
 
 function midia(arquivo, alt = "", classe = "") {
   if (!arquivo) return "";
@@ -172,9 +208,9 @@ function midia(arquivo, alt = "", classe = "") {
 function embed(link) {
   if (!link) return "";
   let m = link.match(/(?:youtube\.com\/(?:watch\?v=|shorts\/|embed\/)|youtu\.be\/)([\w-]{6,})/);
-  if (m) return `<div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/${m[1]}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy" title="Vídeo"></iframe></div>`;
+  if (m) return `<div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/${m[1]}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy" title="${ui("video")}"></iframe></div>`;
   m = link.match(/vimeo\.com\/(?:video\/)?(\d+)/);
-  if (m) return `<div class="embed"><iframe src="https://player.vimeo.com/video/${m[1]}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="Vídeo"></iframe></div>`;
+  if (m) return `<div class="embed"><iframe src="https://player.vimeo.com/video/${m[1]}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="${ui("video")}"></iframe></div>`;
   if (isVideo(link)) return `<video src="${esc(link)}" controls playsinline preload="metadata"></video>`;
   return "";
 }
@@ -194,7 +230,6 @@ function aplicarConfig() {
   document.body.classList.toggle("anim", SITE.grid?.animacoes !== false);
   document.querySelectorAll("[data-nome]").forEach(e => e.textContent = SITE.nome || "");
   document.querySelector("[data-ano]").textContent = "/ " + (SITE.ano_rodape || new Date().getFullYear());
-  document.querySelector('meta[name="description"]').content = SITE.descricao_google || "";
   document.querySelectorAll("[data-socials]").forEach(e => e.innerHTML = socials());
 }
 
@@ -205,55 +240,55 @@ function socials() {
 }
 
 function capa(p, i) {
-  if (p.capa) return midia(p.capa, p.cliente);
-  return `<div class="ph" style="--r:${RATIOS[i % 4]};background:${CORES_PH[i % CORES_PH.length]}">${esc(p.cliente)}</div>`;
+  if (p.capa) return midia(p.capa, tr(p, "cliente"));
+  return `<div class="ph" style="--r:${RATIOS[i % 4]};background:${CORES_PH[i % CORES_PH.length]}">${esc(tr(p, "cliente"))}</div>`;
 }
 
 function home() {
   return `<div class="page">
     <section class="hero">
-      <h1>${esc(SITE.hero)}</h1>
-      <a class="arrow" href="#trabalhos" aria-label="Ver projetos"><svg viewBox="0 0 14 14"><path d="M1 1h12L7 7zM1 7h12l-6 6z"/></svg></a>
+      <h1>${esc(tr(SITE, "hero"))}</h1>
+      <a class="arrow" href="#trabalhos" aria-label="${ui("ver")}"><svg viewBox="0 0 14 14"><path d="M1 1h12L7 7zM1 7h12l-6 6z"/></svg></a>
     </section>
     <main class="work" id="trabalhos">
       ${PROJETOS.map((p, i) => `
-        <a class="card" href="/projetos/${esc(p.slug)}">
-          <div class="thumb">${capa(p, i)}<div class="tag">${esc(p.titulo)}</div></div>
-          <div class="cap"><div><b>${esc(p.cliente)}</b><span>${esc(p.titulo)}</span></div><time>${esc(p.ano)}</time></div>
+        <a class="card" href="${url.projeto(p.slug)}">
+          <div class="thumb">${capa(p, i)}<div class="tag">${esc(tr(p, "titulo"))}</div></div>
+          <div class="cap"><div><b>${esc(tr(p, "cliente"))}</b><span>${esc(tr(p, "titulo"))}</span></div><time>${esc(p.ano)}</time></div>
         </a>`).join("")}
     </main></div>`;
 }
 
 function bloco(b) {
   const t = b.tipo || b._block;
-  if (t === "imagem") return b.arquivo
-    ? `<figure class="media">${midia(b.arquivo, b.legenda)}${b.legenda ? `<figcaption>${esc(b.legenda)}</figcaption>` : ""}</figure>`
-    : `<div class="media"><div class="ph">Imagem</div></div>`;
+  if (t === "imagem") { const leg = tr(b, "legenda"); return b.arquivo
+    ? `<figure class="media">${midia(b.arquivo, leg)}${leg ? `<figcaption>${esc(leg)}</figcaption>` : ""}</figure>`
+    : `<div class="media"><div class="ph">${ui("imagem")}</div></div>`; }
   if (t === "imagens_lado_a_lado") {
     const arr = (b.arquivos || []);
     return `<div class="row" style="--n:${Math.min(Math.max(arr.length,1),4)}">${arr.map(a => a
-      ? `<div class="media">${midia(a)}</div>` : `<div class="media"><div class="ph" style="aspect-ratio:4/5">Imagem</div></div>`).join("")}</div>`;
+      ? `<div class="media">${midia(a)}</div>` : `<div class="media"><div class="ph" style="aspect-ratio:4/5">${ui("imagem")}</div></div>`).join("")}</div>`;
   }
-  if (t === "texto") return `<div class="prose"><h2>${esc(b.titulo)}</h2><div class="rich">${rich(b.corpo)}</div></div>`;
-  if (t === "video") return embed(b.link) || (b.arquivo ? `<div class="media">${midia(b.arquivo)}</div>`.replace("autoplay muted loop", "controls") : `<div class="media"><div class="ph">Vídeo</div></div>`);
+  if (t === "texto") return `<div class="prose"><h2>${esc(tr(b, "titulo"))}</h2><div class="rich">${rich(tr(b, "corpo"))}</div></div>`;
+  if (t === "video") return embed(b.link) || (b.arquivo ? `<div class="media">${midia(b.arquivo)}</div>`.replace("autoplay muted loop", "controls") : `<div class="media"><div class="ph">${ui("video")}</div></div>`);
   return "";
 }
 
 function projeto(p) {
   const i = PROJETOS.indexOf(p), n = PROJETOS.length;
   const prev = PROJETOS[(i - 1 + n) % n], next = PROJETOS[(i + 1) % n];
-  const f = p.ficha || [], meio = Math.ceil(f.length / 2);
+  const f = (p.ficha || []).map(x => ({ rotulo: tr(x, "rotulo"), valor: tr(x, "valor") })), meio = Math.ceil(f.length / 2);
   const dl = arr => `<dl>${arr.map(x => `<div><dt>${esc(x.rotulo)}</dt><dd>${esc(x.valor)}</dd></div>`).join("")}</dl>`;
   return `<article class="page">
     <header class="ficha">
-      <div><h1>${esc(p.cliente)} — ${esc(p.titulo)}</h1>${dl(f.slice(0, meio))}</div>
-      <div>${dl([{rotulo:"Ano", valor:`${p.ano || ""}${p.local ? ` ( ${p.local} )` : ""}`}, ...f.slice(meio)])}</div>
-      <div class="rich">${rich(p.resumo)}</div>
+      <div><h1>${esc(tr(p, "cliente"))} — ${esc(tr(p, "titulo"))}</h1>${dl(f.slice(0, meio))}</div>
+      <div>${dl([{rotulo:ui("ano"), valor:`${p.ano || ""}${p.local ? ` ( ${p.local} )` : ""}`}, ...f.slice(meio)])}</div>
+      <div class="rich">${rich(tr(p, "resumo"))}</div>
     </header>
     <div class="blocks">${(p.blocos || []).map(bloco).join("")}</div>
-    ${n > 1 ? `<nav class="pager" aria-label="Outros projetos">
-      <a href="/projetos/${esc(prev.slug)}"><small>← Anterior</small><b>${esc(prev.cliente)}</b></a>
-      <a href="/projetos/${esc(next.slug)}"><small>Próximo →</small><b>${esc(next.cliente)}</b></a>
+    ${n > 1 ? `<nav class="pager" aria-label="${ui("outros")}">
+      <a href="${url.projeto(prev.slug)}"><small>${ui("anterior")}</small><b>${esc(tr(prev, "cliente"))}</b></a>
+      <a href="${url.projeto(next.slug)}"><small>${ui("proximo")}</small><b>${esc(tr(next, "cliente"))}</b></a>
     </nav>` : ""}
   </article>`;
 }
@@ -262,43 +297,57 @@ function sobre() {
   const s = SITE.sobre || {}, c = SITE.contato || {};
   const listas = s.listas || [];
   const metade = Math.ceil(listas.length / 2);
-  const lista = l => `<h2>${esc(l.titulo)}</h2><ul>${(l.itens || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul>`;
+  const lista = l => `<h2>${esc(tr(l, "titulo"))}</h2><ul>${(tr(l, "itens") || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul>`;
   return `<section class="about page">
     <div class="col-photo">
       <div class="photo">${s.foto ? `<img src="${esc(s.foto)}" alt="${esc(SITE.nome)}">` : `<span>${esc((SITE.nome||"").split(" ").map(w=>w[0]).join("").slice(0,2))}</span>`}</div>
       <div class="socials">${socials()}</div>
     </div>
-    <div class="col-bio"><h1>${esc(s.titulo)}</h1><div class="rich">${rich(s.texto)}</div></div>
+    <div class="col-bio"><h1>${esc(tr(s, "titulo"))}</h1><div class="rich">${rich(tr(s, "texto"))}</div></div>
     <div class="col-exp">${listas.slice(0, metade).map(lista).join("")}</div>
     <div class="col-cont">
-      <h2>Contato</h2><ul>${c.email ? `<li class="sel">${esc(c.email)}</li>` : ""}${c.whatsapp_numero ? `<li class="sel">${esc(c.whatsapp_numero)}</li>` : ""}</ul>
+      <h2>${ui("contato")}</h2><ul>${c.email ? `<li class="sel">${esc(c.email)}</li>` : ""}${c.whatsapp_numero ? `<li class="sel">${esc(c.whatsapp_numero)}</li>` : ""}</ul>
       ${listas.slice(metade).map(lista).join("")}
     </div>
   </section>`;
 }
 
 function render() {
-  const path = location.pathname.replace(/\/+$/, "") || "/";
-  let rota = "inicio";
-  const m = path.match(/^\/projetos\/([^/]+)$/);
-  const p = m && PROJETOS.find(x => x.slug === decodeURIComponent(m[1]));
-  if (path === "/sobre") { $app.innerHTML = sobre(); rota = "sobre"; document.title = `Sobre · ${SITE.nome}`; }
-  else if (p) { $app.innerHTML = projeto(p); rota = "projeto"; document.title = `${p.cliente} — ${p.titulo} · ${SITE.nome}`; }
+  const rota = lerRota();
+  LANG = rota.lang;
+  document.documentElement.lang = LANG === "en" ? "en" : "pt-BR";
+  const p = rota.pagina === "projeto" && PROJETOS.find(x => x.slug === rota.slug);
+  let atual = "inicio";
+  if (rota.pagina === "sobre") { $app.innerHTML = sobre(); atual = "sobre"; document.title = `${ui("sobre")} · ${SITE.nome}`; }
+  else if (p) { $app.innerHTML = projeto(p); atual = "projeto"; document.title = `${tr(p, "cliente")} — ${tr(p, "titulo")} · ${SITE.nome}`; }
   else { $app.innerHTML = home(); document.title = SITE.nome; }
+  document.querySelector('meta[name="description"]').content = tr(SITE, "descricao_google") || "";
+
+  // menu, logo, rodapé e botões de idioma
+  document.querySelectorAll("[data-nome]").forEach(a => a.href = url.home());
   document.querySelectorAll("[data-nav]").forEach(a => {
-    const on = a.dataset.nav === rota || (rota === "projeto" && a.dataset.nav === "inicio");
+    const k = a.dataset.nav;
+    a.textContent = ui(k === "inicio" ? "projetos" : "sobre");
+    a.href = k === "inicio" ? url.home() : url.sobre();
+    const on = k === atual || (atual === "projeto" && k === "inicio");
     on ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current");
+  });
+  document.querySelectorAll("[data-lang]").forEach(a => {
+    const l = a.dataset.lang;
+    a.href = atual === "sobre" ? url.sobre(l) : p ? url.projeto(p.slug, l) : url.home(l);
+    l === LANG ? a.setAttribute("aria-current", "true") : a.removeAttribute("aria-current");
   });
 }
 
-function ir(url, trocarHistorico) {
-  const u = new URL(url, location.href);
-  if (u.hash === "#trabalhos" && (u.pathname === "/" || u.pathname === "")) {
-    if (location.pathname !== "/") { history.pushState(null, "", "/"); render(); }
+function ir(href) {
+  const u = new URL(href, location.href);
+  if (u.hash === "#trabalhos") {
+    const destino = u.pathname;
+    if (location.pathname !== destino) { history.pushState(null, "", destino); render(); }
     requestAnimationFrame(() => document.getElementById("trabalhos")?.scrollIntoView({behavior:"smooth"}));
     return;
   }
-  trocarHistorico ? history.replaceState(null, "", u.pathname) : history.pushState(null, "", u.pathname);
+  history.pushState(null, "", u.pathname);
   render(); window.scrollTo(0, 0);
 }
 
@@ -307,7 +356,9 @@ document.addEventListener("click", e => {
   if (!a || a.target === "_blank" || e.metaKey || e.ctrlKey || e.shiftKey) return;
   const u = new URL(a.href, location.href);
   if (u.origin !== location.origin) return;
-  e.preventDefault(); ir(a.href);
+  e.preventDefault();
+  if (u.hash === "#trabalhos" && !a.getAttribute("href").startsWith("/")) u.pathname = location.pathname;
+  ir(u.href);
 });
 window.addEventListener("popstate", render);
 
@@ -320,7 +371,7 @@ window.addEventListener("popstate", render);
     SITE = s; PROJETOS = p;
     aplicarConfig(); render();
   } catch (err) {
-    $app.innerHTML = `<p class="loading">Não consegui carregar o conteúdo do site. Confira se o build rodou no Cloudflare.</p>`;
+    $app.innerHTML = `<p class="loading">Não consegui carregar o conteúdo do site. / Could not load the site content.</p>`;
     console.error(err);
   }
 })();
