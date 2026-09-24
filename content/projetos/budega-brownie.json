@@ -1,0 +1,13 @@
+{
+  "cliente": "BUDEGA BROWNIE",
+  "titulo": "Packaging",
+  "slug": "budega-brownie",
+  "ano": "2023",
+  "local": "Teresina",
+  "ordem": 200,
+  "publicado": true,
+  "capa": "/media/capa.png",
+  "ficha": [
+    {}
+  ]
+}
