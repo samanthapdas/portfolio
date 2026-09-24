@@ -3,193 +3,327 @@ media:
   input: media
   output: /media
   rename: safe
-  extensions: [jpg, jpeg, png, webp, gif, avif, svg, mp4, webm]
-
+  extensions:
+  - jpg
+  - jpeg
+  - png
+  - webp
+  - gif
+  - avif
+  - svg
+  - mp4
+  - webm
 content:
-  - name: projetos
-    label: Projetos
-    type: collection
-    path: content/projetos
-    format: json
-    filename: "{fields.slug}.json"
-    view:
-      primary: cliente
-      fields: [cliente, titulo, ano, ordem, publicado]
-      sort: [ordem, cliente, ano]
-      default:
-        sort: ordem
-        order: asc
+- name: projetos
+  label: Projetos
+  type: collection
+  path: content/projetos
+  format: json
+  filename: '{fields.slug}.json'
+  view:
+    primary: cliente
     fields:
-      - name: cliente
-        label: Cliente
-        type: string
-        required: true
-      - name: titulo
-        label: Título do projeto
-        type: string
-        required: true
-      - name: slug
-        label: Endereço da página
-        type: string
-        required: true
-        pattern: "^[a-z0-9-]+$"
-        description: "Fica assim no site: /projetos/este-endereco. Só minúsculas, números e hífen."
-      - name: ano
-        label: Ano
-        type: string
-      - name: local
-        label: Local (sigla)
-        type: string
-        description: "Ex: BSB, SSA, LIS"
-      - name: ordem
-        label: Ordem na home
-        type: number
-        default: 100
-        description: "Número menor aparece primeiro no grid. Ex: 10, 20, 30…"
-      - name: publicado
-        label: Publicado
-        type: boolean
-        default: true
-        description: "Desmarque pra esconder o projeto do site sem apagar."
-      - name: capa
-        label: Capa (imagem, GIF ou vídeo MP4)
+    - cliente
+    - titulo
+    - ano
+    - ordem
+    - publicado
+    sort:
+    - ordem
+    - cliente
+    - ano
+    default:
+      sort: ordem
+      order: asc
+  fields:
+  - name: cliente
+    label: Cliente
+    type: string
+    required: true
+  - name: cliente_en
+    label: Cliente (EN)
+    type: string
+    description: Só se o nome do cliente mudar em inglês. Senão, deixe em branco.
+  - name: titulo
+    label: Título do projeto
+    type: string
+    required: true
+  - name: titulo_en
+    label: Título do projeto (EN)
+    type: string
+    description: Deixe em branco pra usar o texto em português.
+  - name: slug
+    label: Endereço da página
+    type: string
+    required: true
+    pattern: ^[a-z0-9-]+$
+    description: 'Fica assim no site: /projetos/este-endereco. Só minúsculas, números e hífen.'
+  - name: ano
+    label: Ano
+    type: string
+  - name: local
+    label: Local (sigla)
+    type: string
+    description: 'Ex: BSB, SSA, LIS'
+  - name: ordem
+    label: Ordem na home
+    type: number
+    default: 100
+    description: 'Número menor aparece primeiro no grid. Ex: 10, 20, 30…'
+  - name: publicado
+    label: Publicado
+    type: boolean
+    default: true
+    description: Desmarque pra esconder o projeto do site sem apagar.
+  - name: capa
+    label: Capa (imagem, GIF ou vídeo MP4)
+    type: file
+    options:
+      extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      - gif
+      - avif
+      - mp4
+      - webm
+    description: 'Aparece no grid da home. GIF e MP4 rodam em loop, sem som. Dica: MP4 é bem mais leve que GIF.'
+  - name: ficha
+    label: Ficha técnica
+    type: object
+    list: true
+    description: 'Ex: Cliente / Agência / Função / Entregas. O ano entra sozinho.'
+    fields:
+    - name: rotulo
+      label: Rótulo
+      type: string
+    - name: rotulo_en
+      label: Rótulo (EN)
+      type: string
+      description: 'Ex: Agency, Role, Deliverables'
+    - name: valor
+      label: Valor
+      type: string
+    - name: valor_en
+      label: Valor (EN)
+      type: string
+      description: Deixe em branco pra usar o texto em português.
+  - name: resumo
+    label: Resumo
+    type: rich-text
+  - name: resumo_en
+    label: Resumo (EN)
+    type: rich-text
+    description: Deixe em branco pra usar o texto em português.
+  - name: blocos
+    label: Conteúdo da página
+    description: Monte a página com blocos, na ordem que quiser. Arraste pra reordenar.
+    type: block
+    list: true
+    blockKey: tipo
+    blocks:
+    - name: imagem
+      label: Imagem grande (ou GIF / vídeo em loop)
+      fields:
+      - name: arquivo
+        label: Arquivo
         type: file
         options:
-          extensions: [jpg, jpeg, png, webp, gif, avif, mp4, webm]
-        description: "Aparece no grid da home. GIF e MP4 rodam em loop, sem som. Dica: MP4 é bem mais leve que GIF."
-      - name: ficha
-        label: Ficha técnica
-        type: object
-        list: true
-        description: "Ex: Cliente / Agência / Função / Entregas. O ano entra sozinho."
-        fields:
-          - name: rotulo
-            label: Rótulo
-            type: string
-          - name: valor
-            label: Valor
-            type: string
-      - name: resumo
-        label: Resumo
+          extensions:
+          - jpg
+          - jpeg
+          - png
+          - webp
+          - gif
+          - avif
+          - mp4
+          - webm
+      - name: legenda
+        label: Legenda (opcional)
+        type: string
+      - name: legenda_en
+        label: Legenda (opcional) (EN)
+        type: string
+        description: Deixe em branco pra usar o texto em português.
+    - name: imagens_lado_a_lado
+      label: Imagens lado a lado (2 a 4)
+      fields:
+      - name: arquivos
+        label: Arquivos
+        type: file
+        options:
+          multiple:
+            max: 4
+          extensions:
+          - jpg
+          - jpeg
+          - png
+          - webp
+          - gif
+          - avif
+          - mp4
+          - webm
+    - name: texto
+      label: Texto corrido
+      fields:
+      - name: titulo
+        label: Título
+        type: string
+      - name: titulo_en
+        label: Título (EN)
+        type: string
+        description: Deixe em branco pra usar o texto em português.
+      - name: corpo
+        label: Texto
         type: rich-text
-      - name: blocos
-        label: Conteúdo da página
-        description: "Monte a página com blocos, na ordem que quiser. Arraste pra reordenar."
-        type: block
-        list: true
-        blockKey: tipo
-        blocks:
-          - name: imagem
-            label: Imagem grande (ou GIF / vídeo em loop)
-            fields:
-              - name: arquivo
-                label: Arquivo
-                type: file
-                options:
-                  extensions: [jpg, jpeg, png, webp, gif, avif, mp4, webm]
-              - name: legenda
-                label: Legenda (opcional)
-                type: string
-          - name: imagens_lado_a_lado
-            label: Imagens lado a lado (2 a 4)
-            fields:
-              - name: arquivos
-                label: Arquivos
-                type: file
-                options:
-                  multiple:
-                    max: 4
-                  extensions: [jpg, jpeg, png, webp, gif, avif, mp4, webm]
-          - name: texto
-            label: Texto corrido
-            fields:
-              - name: titulo
-                label: Título
-                type: string
-              - name: corpo
-                label: Texto
-                type: rich-text
-          - name: video
-            label: Vídeo com som (YouTube, Vimeo ou arquivo)
-            fields:
-              - name: link
-                label: Link do YouTube ou Vimeo
-                type: string
-              - name: arquivo
-                label: Ou envie um arquivo MP4
-                type: file
-                options:
-                  extensions: [mp4, webm]
-
-  - name: site
-    label: Configurações do site
-    type: file
-    path: content/site.json
-    format: json
+      - name: corpo_en
+        label: Texto (EN)
+        type: rich-text
+        description: Deixe em branco pra usar o texto em português.
+    - name: video
+      label: Vídeo com som (YouTube, Vimeo ou arquivo)
+      fields:
+      - name: link
+        label: Link do YouTube ou Vimeo
+        type: string
+      - name: arquivo
+        label: Ou envie um arquivo MP4
+        type: file
+        options:
+          extensions:
+          - mp4
+          - webm
+- name: site
+  label: Configurações do site
+  type: file
+  path: content/site.json
+  format: json
+  fields:
+  - name: nome
+    label: Seu nome (menu e rodapé)
+    type: string
+  - name: ano_rodape
+    label: Ano no rodapé
+    type: string
+  - name: descricao_google
+    label: Descrição pro Google e WhatsApp
+    type: text
+  - name: descricao_google_en
+    label: Descrição pro Google e WhatsApp (EN)
+    type: text
+    description: Deixe em branco pra usar o texto em português.
+  - name: hero
+    label: Texto de abertura da home
+    type: text
+  - name: hero_en
+    label: Texto de abertura da home (EN)
+    type: text
+    description: Deixe em branco pra usar o texto em português.
+  - name: cores
+    label: Cores
+    type: object
+    description: 'Use código hex, ex: #0000FF'
     fields:
-      - name: nome
-        label: Seu nome (menu e rodapé)
+    - name: fundo
+      label: Fundo
+      type: string
+    - name: texto
+      label: Texto e ícones
+      type: string
+    - name: texto_suave
+      label: Texto de apoio (legendas)
+      type: string
+    - name: linhas
+      label: Linhas e fundo das imagens
+      type: string
+  - name: fontes
+    label: Fontes (nome exato do Google Fonts)
+    type: object
+    fields:
+    - name: titulos
+      label: Títulos
+      type: string
+    - name: corpo
+      label: Textos
+      type: string
+  - name: grid
+    label: Grid de projetos
+    type: object
+    fields:
+    - name: colunas
+      label: Colunas no computador
+      type: select
+      options:
+        values:
+        - '3'
+        - '4'
+        - '5'
+    - name: animacoes
+      label: Animações de entrada
+      type: boolean
+  - name: contato
+    label: Contato e redes
+    type: object
+    description: Deixe em branco a rede que não quiser mostrar.
+    fields:
+    - name: email
+      label: E-mail
+      type: string
+    - name: whatsapp_numero
+      label: WhatsApp (como aparece escrito)
+      type: string
+    - name: whatsapp_link
+      label: Link do WhatsApp (https://wa.me/55DDDNUMERO)
+      type: string
+    - name: instagram
+      label: Link do Instagram
+      type: string
+    - name: behance
+      label: Link do Behance
+      type: string
+    - name: linkedin
+      label: Link do LinkedIn
+      type: string
+  - name: sobre
+    label: Página Sobre
+    type: object
+    fields:
+    - name: titulo
+      label: Título
+      type: string
+    - name: titulo_en
+      label: Título (EN)
+      type: string
+      description: Deixe em branco pra usar o texto em português.
+    - name: foto
+      label: Foto
+      type: image
+    - name: texto
+      label: Texto
+      type: rich-text
+    - name: texto_en
+      label: Texto (EN)
+      type: rich-text
+      description: Deixe em branco pra usar o texto em português.
+    - name: listas
+      label: Listas (Experiência, Clientes…)
+      type: object
+      list: true
+      fields:
+      - name: titulo
+        label: Título da lista
         type: string
-      - name: ano_rodape
-        label: Ano no rodapé
+      - name: titulo_en
+        label: Título da lista (EN)
         type: string
-      - name: descricao_google
-        label: Descrição pro Google e WhatsApp
-        type: text
-      - name: hero
-        label: Texto de abertura da home
-        type: text
-      - name: cores
-        label: Cores
-        type: object
-        description: "Use código hex, ex: #0000FF"
-        fields:
-          - { name: fundo, label: Fundo, type: string }
-          - { name: texto, label: Texto e ícones, type: string }
-          - { name: texto_suave, label: Texto de apoio (legendas), type: string }
-          - { name: linhas, label: Linhas e fundo das imagens, type: string }
-      - name: fontes
-        label: Fontes (nome exato do Google Fonts)
-        type: object
-        fields:
-          - { name: titulos, label: Títulos, type: string }
-          - { name: corpo, label: Textos, type: string }
-      - name: grid
-        label: Grid de projetos
-        type: object
-        fields:
-          - name: colunas
-            label: Colunas no computador
-            type: select
-            options:
-              values: ["3", "4", "5"]
-          - name: animacoes
-            label: Animações de entrada
-            type: boolean
-      - name: contato
-        label: Contato e redes
-        type: object
-        description: "Deixe em branco a rede que não quiser mostrar."
-        fields:
-          - { name: email, label: E-mail, type: string }
-          - { name: whatsapp_numero, label: WhatsApp (como aparece escrito), type: string }
-          - { name: whatsapp_link, label: "Link do WhatsApp (https://wa.me/55DDDNUMERO)", type: string }
-          - { name: instagram, label: Link do Instagram, type: string }
-          - { name: behance, label: Link do Behance, type: string }
-          - { name: linkedin, label: Link do LinkedIn, type: string }
-      - name: sobre
-        label: Página Sobre
-        type: object
-        fields:
-          - { name: titulo, label: Título, type: string }
-          - name: foto
-            label: Foto
-            type: image
-          - { name: texto, label: Texto, type: rich-text }
-          - name: listas
-            label: Listas (Experiência, Clientes…)
-            type: object
-            list: true
-            fields:
-              - { name: titulo, label: Título da lista, type: string }
-              - { name: itens, label: Itens, type: string, list: true }
+        description: 'Ex: Experience, Services, Clients'
+      - name: itens
+        label: Itens
+        type: string
+        list: true
+      - name: itens_en
+        label: Itens (EN)
+        type: string
+        list: true
+        description: Deixe em branco pra usar o texto em português.
