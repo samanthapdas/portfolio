@@ -1,12 +1,11 @@
 {
-  "slug": "apex-cop31",
   "cliente": "ApexBrasil",
   "titulo": "Pavilhão Brasil · COP31",
+  "slug": "apex-cop31",
   "ano": "2026",
   "local": "AYT",
   "ordem": 70,
-  "publicado": true,
-  "capa": "",
+  "publicado": false,
   "ficha": [
     {
       "rotulo": "Cliente",
@@ -21,30 +20,21 @@
       "valor": "Identidade visual e ativações"
     }
   ],
-  "resumo": "<p>Identidade visual, ativações e brindes do Pavilhão Brasil na COP31, em Antalya.</p><p>Resumo do projeto.</p>",
+  "resumo": "Identidade visual, ativações e brindes do Pavilhão Brasil na COP31, em Antalya.\n\nResumo do projeto.",
   "blocos": [
     {
-      "tipo": "imagem",
-      "arquivo": "",
-      "legenda": ""
+      "tipo": "imagem"
     },
     {
-      "tipo": "imagens_lado_a_lado",
-      "arquivos": [
-        "",
-        "",
-        ""
-      ]
+      "tipo": "imagens_lado_a_lado"
     },
     {
       "tipo": "texto",
       "titulo": "Conceito",
-      "corpo": "<p>Texto corrido sobre o processo e as decisões do projeto. Você pode colocar quantos blocos de texto quiser entre as imagens.</p>"
+      "corpo": "Texto corrido sobre o processo e as decisões do projeto. Você pode colocar quantos blocos de texto quiser entre as imagens."
     },
     {
-      "tipo": "video",
-      "link": "",
-      "arquivo": ""
+      "tipo": "video"
     }
   ]
 }
