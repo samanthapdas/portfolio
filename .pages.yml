@@ -62,9 +62,9 @@ content:
     label: Ano
     type: string
   - name: local
-    label: Local (sigla)
+    label: Local
     type: string
-    description: 'Ex: BSB, SSA, LIS'
+    description: 'Cidade onde o projeto acontece ou circula (ex: Teresina, São Paulo). Deixe vazio se for nacional.'
   - name: ordem
     label: Ordem na home
     type: number
@@ -194,6 +194,23 @@ content:
           extensions:
           - mp4
           - webm
+  - name: creditos
+    label: Ficha técnica completa (equipe)
+    type: object
+    list: true
+    description: 'Aparece no final da página do projeto. Use nos trabalhos em equipe. Ex: Direção Criativa / Isadora Tupinambá'
+    fields:
+    - name: funcao
+      label: Função
+      type: string
+    - name: funcao_en
+      label: Função (EN)
+      type: string
+      description: 'Ex: Creative Direction, Art Direction'
+    - name: nome
+      label: Nome(s)
+      type: string
+      description: 'Separe os nomes com vírgula (vale pro PT e pro EN). Ex: Samantha Araújo, Isadora Tupinambá'
 - name: site
   label: Configurações do site
   type: file
