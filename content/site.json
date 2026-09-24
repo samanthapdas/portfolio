@@ -2,7 +2,8 @@
   "nome": "Samantha Araújo",
   "ano_rodape": "2026",
   "descricao_google": "Samantha Araújo — designer e diretora de arte especialista em identidade visual, comunicação para eventos, festivais e projetos culturais. Brasília.",
-  "hero": "Designer e diretora de arte especialista em identidade visual, comunicação para eventos, festivais e projetos culturais.",
+  "hero": "Designer especialista em branding e comunicação para eventos, festivais e projetos culturais.\"",
+  "hero_en": "Designer specialized in branding and communication for events, festivals and cultural projects.",
   "cores": {
     "fundo": "#0000FF",
     "texto": "#FFFFFF",
@@ -26,8 +27,10 @@
     "linkedin": "https://www.linkedin.com/in/samanthapdas/"
   },
   "sobre": {
-    "titulo": "Oi, prazer!",
-    "texto": "Eu sou a Samantha, designer e diretora de arte em Brasília, com mais de 9 anos criando pra marca, campanha e — principalmente — pra festa.\n\nPassei 4 anos numa produtora de eventos focada em festivais de música, e foi lá que eu entendi que identidade de festival não vive só no Instagram: ela vive no copo, na pulseira, na placa do banheiro e na foto que o público posta no dia seguinte.\n\nHoje sou Art Director na Binder, cuidando de campanhas digitais always-on e concorrências pra CAIXA. Em paralelo, sigo no freela com eventos, festivais e projetos culturais, que é onde meu coração mora.\n\nQuero levar esse olhar pra projetos no Brasil todo e lá fora. Se você tem um festival, bora conversar.",
+    "titulo": "Oi!",
+    "titulo_en": "Hey there!",
+    "texto": "Visual designer com mais de 9 anos de experiência em identidade visual, direção de arte e comunicação para eventos, festivais e projetos culturais.  \n  \nDesenvolvo sistemas visuais completos para marcas e projetos de grande escala, com experiência em campanhas digitais e OOH, comunicação multiplataforma e design institucional.  \n  \nAo longo da carreira, trabalhei em projetos como Na Praia Festival, Festival MESKLA e Ensaios da Anitta, além de campanhas digitais para a CAIXA Econômica Federal. Seja dentro do universo cultural ou institucional, trago o mesmo cuidado, consistência e qualidade para cada projeto.",
+    "texto_en": "Visual designer with over 9 years of experience in visual identity, art direction and communication for events, festivals and cultural projects.  \n   \nI develop complete visual systems for large-scale brands and projects, with experience in digital and OOH campaigns, multi-platform communication and institutional design.  \n   \nThroughout my career, I have worked on large-scale cultural projects and music festivals in Brazil — including Na Praia Festival, Festival MESKLA and Ensaios da Anitta — as well as digital campaigns for CAIXA Econômica Federal, one of Brazil's largest public banks.",
     "listas": [
       {
         "titulo": "Experiência",
