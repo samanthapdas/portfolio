@@ -1,0 +1,26 @@
+{
+  "cliente": "IS.ECO",
+  "titulo": "Branding",
+  "slug": "is-eco",
+  "ano": "2024",
+  "local": "Brasília",
+  "ordem": 180,
+  "publicado": true,
+  "capa": "/media/capa.gif",
+  "ficha": [
+    {
+      "rotulo": "Função",
+      "rotulo_en": "Role",
+      "valor": "Direção de Arte",
+      "valor_en": "Art Direction"
+    },
+    {
+      "rotulo": "Entregas",
+      "rotulo_en": "Deliverables",
+      "valor": "Identidade visual, iconografia, aplicações online/offline e social media",
+      "valor_en": "Visual identity, iconography, digital and print applications and social media"
+    }
+  ],
+  "resumo": "A IS.ECO é uma consultoria que ajuda empresas a adotar práticas sustentáveis, alinhadas aos ODSs da ONU. O desafio era tirar a sustentabilidade do discurso sério e deixá-la acessível e bem-humorada.\n\nA identidade brinca com tons naturais e vibrantes, passeia por um sistema de ícones que traduz os temas da consultoria e se desdobra em selos de certificação. Nas aplicações, ousadia e irreverência ocupam as frases e ilustrações, em uma sustentabilidade que dá vontade de vestir e compartilhar.",
+  "resumo_en": "IS.ECO is a consultancy that helps companies adopt sustainable practices aligned with the UN SDGs. The challenge was to take sustainability out of its serious tone and make it accessible and easygoing.\n\nThe identity plays with natural and vibrant tones, moves through an icon system that translates the consultancy's core themes and unfolds into certification badges. Across applications, boldness and irreverence take over the copy and illustrations, shaping a kind of sustainability you want to wear and share."
+}
