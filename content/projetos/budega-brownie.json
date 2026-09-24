@@ -21,7 +21,7 @@
   "blocos": [
     {
       "tipo": "imagem",
-      "arquivo": "/media/01.png"
+      "arquivo": "/media/01.jpg"
     },
     {
       "tipo": "imagem",
@@ -29,7 +29,7 @@
     },
     {
       "tipo": "imagem",
-      "arquivo": "/media/03x.png"
+      "arquivo": "/media/03x.jpg"
     },
     {
       "tipo": "imagens_lado_a_lado",
@@ -40,11 +40,11 @@
     },
     {
       "tipo": "imagem",
-      "arquivo": "/media/06.png"
+      "arquivo": "/media/06.jpg"
     },
     {
       "tipo": "imagem",
-      "arquivo": "/media/07.png"
+      "arquivo": "/media/07.jpg"
     },
     {
       "tipo": "imagens_lado_a_lado",
