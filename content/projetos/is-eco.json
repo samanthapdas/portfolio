@@ -95,7 +95,8 @@
     {
       "tipo": "imagem",
       "arquivo": "/media/21.jpg",
-      "legenda": "Direção Criativa: Isadora TupinambáDireção de Arte: Samantha Araújo e Isadora Tupinambá"
+      "legenda": "Direção Criativa: Isadora Tupinambá / Direção de Arte: Samantha Araújo e Isadora Tupinambá",
+      "legenda_en": "Creative Direction: Isadora Tupinambá / Art Direction: Samantha Araújo e Isadora Tupinambá"
     },
     {
       "tipo": "texto",
