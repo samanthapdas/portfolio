@@ -10,12 +10,6 @@
   "capa": "/media/capa.png",
   "ficha": [
     {
-      "rotulo": "Função",
-      "rotulo_en": "Role",
-      "valor": "Direção de Arte",
-      "valor_en": "Art Direction"
-    },
-    {
       "rotulo": "Entregas",
       "rotulo_en": "Deliverables",
       "valor": "Identidade visual e embalagens",
