@@ -50,7 +50,7 @@
 
   /* home */
   .hero{padding-block:clamp(72px,16vh,170px) clamp(56px,10vh,110px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(40px,8vh,90px)}
-  .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(28px,4.8vw,64px);line-height:1.05;letter-spacing:-.025em;margin:0;max-width:22ch;text-wrap:balance}
+  .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(26px,4vw,54px);line-height:1.06;letter-spacing:-.025em;margin:0;max-width:24ch;text-wrap:balance}
   .arrow{display:inline-flex;width:28px;height:28px;align-items:center;justify-content:center;animation:bob 1.8s ease-in-out infinite}
   .arrow svg{width:14px;height:14px;fill:var(--texto)}
   @keyframes bob{50%{transform:translateY(6px)}}
@@ -86,6 +86,11 @@
   .prose{display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(20px,3vw,48px);padding-block:clamp(28px,6vh,64px)}
   .prose h2{font-family:var(--display);font-weight:800;font-size:clamp(20px,2vw,28px);letter-spacing:-.02em;line-height:1.05;margin:0}
   .prose .rich p{font-size:15px;line-height:1.55}
+  .creditos{border-top:1px solid var(--linhas);padding-block:22px 44px}
+  .creditos h2{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin:0 0 16px}
+  .creditos dl{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px 32px;margin:0;font-size:13px;line-height:1.4}
+  .creditos dt{color:var(--texto-suave);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+  .creditos dd{margin:3px 0 0}
   .pager{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--linhas);padding-block:28px 64px}
   .pager a{text-decoration:none;display:grid;gap:4px;max-width:45%}
   .pager a:last-child{text-align:right}
@@ -107,7 +112,7 @@
   .about .sel{user-select:all}
 
   /* rodapé */
-  .foot{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-top:1px solid var(--linhas);padding-block:18px calc(18px + env(safe-area-inset-bottom,0px));font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.06em;line-height:1;text-transform:uppercase}
+  .foot{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-top:1px solid var(--linhas);padding-block:10px calc(16px + env(safe-area-inset-bottom,0px));font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.06em;line-height:1;text-transform:uppercase}
   .foot a{text-decoration:none}
 
   .anim .page{animation:in .5s ease both}
@@ -148,7 +153,7 @@
 
 <footer class="foot">
   <a href="/" data-nome>Samantha Araújo</a>
-  <span data-ano>/ 2026</span>
+  <span data-ano>© 2026</span>
 </footer>
 
 <script>
@@ -170,8 +175,8 @@ const rich = t => !t ? "" : /<[a-z]/i.test(t) ? t : t.split(/\n\s*\n/).map(p => 
 
 /* ---------- idiomas ---------- */
 const UI = {
-  pt: { projetos:"Projetos", sobre:"Sobre", anterior:"← Anterior", proximo:"Próximo →", ano:"Ano", contato:"Contato", ver:"Ver projetos", outros:"Outros projetos", imagem:"Imagem", video:"Vídeo" },
-  en: { projetos:"Projects", sobre:"About", anterior:"← Previous", proximo:"Next →", ano:"Year", contato:"Contact", ver:"See projects", outros:"More projects", imagem:"Image", video:"Video" }
+  pt: { projetos:"Projetos", sobre:"Sobre", anterior:"← Anterior", proximo:"Próximo →", ano:"Ano", contato:"Contato", ver:"Ver projetos", outros:"Outros projetos", imagem:"Imagem", video:"Vídeo", creditos:"Ficha técnica" },
+  en: { projetos:"Projects", sobre:"About", anterior:"← Previous", proximo:"Next →", ano:"Year", contato:"Contact", ver:"See projects", outros:"More projects", imagem:"Image", video:"Video", creditos:"Credits" }
 };
 const ui = k => UI[LANG][k];
 // Pega o campo em inglês (campo_en) quando estiver no EN e ele estiver preenchido; senão usa o português.
@@ -229,7 +234,7 @@ function aplicarConfig() {
   r.setProperty("--cols", SITE.grid?.colunas || 4);
   document.body.classList.toggle("anim", SITE.grid?.animacoes !== false);
   document.querySelectorAll("[data-nome]").forEach(e => e.textContent = SITE.nome || "");
-  document.querySelector("[data-ano]").textContent = "/ " + (SITE.ano_rodape || new Date().getFullYear());
+  document.querySelector("[data-ano]").textContent = "© " + (SITE.ano_rodape || new Date().getFullYear());
   document.querySelectorAll("[data-socials]").forEach(e => e.innerHTML = socials());
 }
 
@@ -274,6 +279,13 @@ function bloco(b) {
   return "";
 }
 
+function creditos(p) {
+  const c = (p.creditos || []).filter(x => x && (x.funcao || x.nome));
+  if (!c.length) return "";
+  return `<section class="creditos"><h2>${ui("creditos")}</h2><dl>${c.map(x =>
+    `<div><dt>${esc(tr(x, "funcao"))}</dt><dd>${esc(x.nome)}</dd></div>`).join("")}</dl></section>`;
+}
+
 function projeto(p) {
   const i = PROJETOS.indexOf(p), n = PROJETOS.length;
   const prev = PROJETOS[(i - 1 + n) % n], next = PROJETOS[(i + 1) % n];
@@ -286,6 +298,7 @@ function projeto(p) {
       <div class="rich">${rich(tr(p, "resumo"))}</div>
     </header>
     <div class="blocks">${(p.blocos || []).map(bloco).join("")}</div>
+    ${creditos(p)}
     ${n > 1 ? `<nav class="pager" aria-label="${ui("outros")}">
       <a href="${url.projeto(prev.slug)}"><small>${ui("anterior")}</small><b>${esc(tr(prev, "cliente"))}</b></a>
       <a href="${url.projeto(next.slug)}"><small>${ui("proximo")}</small><b>${esc(tr(next, "cliente"))}</b></a>
