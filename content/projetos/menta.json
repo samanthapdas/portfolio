@@ -6,7 +6,7 @@
   "local": "Brasília",
   "ordem": 170,
   "publicado": true,
-  "capa": "/media/capa.jpg",
+  "capa": "/media/capa2.jpg",
   "ficha": [
     {
       "rotulo": "Função",
@@ -91,7 +91,7 @@
     {
       "tipo": "texto",
       "corpo": "Direção Criativa: Isadora Tupinambá  \nDireção de Arte: Samantha Araújo e Isadora Tupinambá",
-      "corpo_en": "Creative direction: Isadora Tupinambá    \nArt Direction: Samantha Araújo e Isadora Tupinambá"
+      "corpo_en": "Creative Direction: Isadora Tupinambá  \nArt Direction: Samantha Araújo e Isadora Tupinambá"
     }
   ]
 }
