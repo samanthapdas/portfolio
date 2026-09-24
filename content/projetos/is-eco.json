@@ -30,7 +30,7 @@
     },
     {
       "tipo": "imagem",
-      "arquivo": "/media/02.gif"
+      "arquivo": "/media/02-1.gif"
     },
     {
       "tipo": "imagem",
@@ -110,8 +110,8 @@
     },
     {
       "tipo": "texto",
-      "corpo": "**Direção Criativa:** Isadora Tupinambá  \n**Direção de Arte:** Samantha Araújo e Isadora Tupinambá",
-      "corpo_en": "**Creative Direction:** Isadora Tupinambá    \n**Art Direction:** Samantha Araújo e Isadora Tupinambá"
+      "corpo": "```\nDireção Criativa: Isadora Tupinambá\nDireção de Arte: Samantha Araújo e Isadora Tupinambá\n```\n\n",
+      "corpo_en": "**Creative Direction:** Isadora Tupinambá  \n**Art Direction:** Samantha Araújo e Isadora Tupinambá"
     }
   ]
 }
