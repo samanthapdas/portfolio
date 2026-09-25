@@ -6,7 +6,7 @@
   "local": "Brasília",
   "ordem": 190,
   "publicado": true,
-  "capa": "/media/09-3.jpg",
+  "capa": "/media/capa2-1.jpg",
   "ficha": [
     {
       "rotulo": "Entregas",
@@ -15,5 +15,67 @@
       "valor_en": "Branding, visual identity, iconography, signage, online/offline applications and social media"
     }
   ],
-  "resumo": "Conta Comigo é um projeto que integra pesquisa, conscientização e ação prática para erradicar a violência contra mulheres e pessoas em vulnerabilidade em eventos culturais e de entretenimento. Tem como objetivo criar espaços seguros e acolhedores, livres de violência, e garantir que todas possam participar e apreciar experiências culturais sem medo."
+  "resumo": "Conta Comigo é um projeto que integra pesquisa, conscientização e ação prática para erradicar a violência contra mulheres e pessoas em vulnerabilidade em eventos culturais e de entretenimento. Tem como objetivo criar espaços seguros e acolhedores, livres de violência, e garantir que todas possam participar e apreciar experiências culturais sem medo.",
+  "blocos": [
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/02-2.png"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/02-03.png"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/01-2.png"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/05-2.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/06-1.png"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/07-08.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/08-2.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/09-4.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/10-2.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/13-14.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/14-2.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/15-2.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/16-18.gif"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/19-1.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/20-1.jpg"
+    }
+  ]
 }
