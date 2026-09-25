@@ -5,7 +5,7 @@
   "hero": "Visual designer com foco em branding e direção de arte para marcas, campanhas e festivais.",
   "hero_en": "Visual designer focused on branding and art direction for brands, campaigns and festivals.",
   "cores": {
-    "fundo": "#0000FF",
+    "fundo": "0041ec",
     "texto": "#FFFFFF",
     "texto_suave": "#B8B8FF",
     "linhas": "#4D4DFF"
@@ -19,8 +19,8 @@
     "animacoes": true
   },
   "contato": {
-    "email": "seuemail@exemplo.com",
-    "whatsapp_numero": "+55 61 9 0000-0000",
+    "email": "samanthapdas@gmail.com",
+    "whatsapp_numero": "+55 61 98515-5423",
     "whatsapp_link": "https://wa.me/5561985155423",
     "instagram": "https://www.instagram.com/samdamafia",
     "behance": "https://www.behance.net/samanthaaraujo",
@@ -30,8 +30,8 @@
     "titulo": "Oi!",
     "titulo_en": "Hi!",
     "foto": "/media/capa-1.jpg",
-    "texto": "Visual designer com mais de 9 anos de experiência em identidade visual, direção de arte e comunicação para eventos, festivais e projetos culturais.  \n  \nDesenvolvo sistemas visuais completos para marcas e projetos de grande escala, com experiência em campanhas digitais e OOH, comunicação multiplataforma e design institucional.  \n  \nAo longo da carreira, trabalhei em projetos como Na Praia Festival, Festival MESKLA e Ensaios da Anitta, além de campanhas digitais para a CAIXA Econômica Federal. Seja dentro do universo cultural ou institucional, trago o mesmo cuidado, consistência e qualidade para cada projeto.",
-    "texto_en": "Visual designer with over 9 years of experience in visual identity, art direction and communication for events, festivals and cultural projects.  \n   \nI develop complete visual systems for large-scale brands and projects, with experience in digital and OOH campaigns, multi-platform communication and institutional design.  \n   \nThroughout my career, I have worked on large-scale cultural projects and music festivals in Brazil — including Na Praia Festival, Festival MESKLA and Ensaios da Anitta — as well as digital campaigns for CAIXA Econômica Federal, one of Brazil's largest public banks.",
+    "texto": "Visual designer com mais de 9 anos de experiência em identidade visual, direção de arte e comunicação para eventos, festivais e projetos culturais.  \n\nDesenvolvo sistemas visuais completos para marcas e projetos de grande escala, com experiência em campanhas digitais e OOH, comunicação multiplataforma e design institucional.  \n\nAo longo da carreira, trabalhei em projetos como Na Praia Festival, Festival MESKLA e Ensaios da Anitta, além de campanhas digitais para a CAIXA Econômica Federal. Seja dentro do universo cultural ou institucional, trago o mesmo cuidado, consistência e qualidade para cada projeto.",
+    "texto_en": "Visual designer with over 9 years of experience in visual identity, art direction and communication for events, festivals and cultural projects.  \n\nI develop complete visual systems for large-scale brands and projects, with experience in digital and OOH campaigns, multi-platform communication and institutional design.  \n\nThroughout my career, I have worked on large-scale cultural projects and music festivals in Brazil — including Na Praia Festival, Festival MESKLA and Ensaios da Anitta — as well as digital campaigns for CAIXA Econômica Federal, one of Brazil's largest public banks.",
     "listas": [
       {
         "titulo": "Experiência",
