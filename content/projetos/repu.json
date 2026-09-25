@@ -6,6 +6,7 @@
   "local": "Brasília",
   "ordem": 140,
   "publicado": true,
+  "capa": "/media/capa.gif",
   "ficha": [
     {
       "rotulo": "Entregas",
