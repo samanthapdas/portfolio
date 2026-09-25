@@ -5,5 +5,74 @@
   "ano": "2025",
   "local": "Brasília",
   "ordem": 140,
-  "publicado": true
+  "publicado": true,
+  "ficha": [
+    {
+      "rotulo": "Entregas",
+      "rotulo_en": "Deliverables",
+      "valor": "Rebranding, aplicações físicas e digitais e social media",
+      "valor_en": "Rebranding, digital and print applications and social media"
+    }
+  ],
+  "resumo": "Criada em 2017, a Repu se constrói a partir de diferentes “eras”, onde cada edição explora um novo artista, estética e universo da cultura pop. O desafio foi estruturar um sistema visual capaz de sustentar essa constante transformação e que reforçasse o caráter plural e livre da marca, conectando-se com um público que busca identificação e pertencimento.",
+  "blocos": [
+    {
+      "tipo": "imagem"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/03-2.png"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/04x.png"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/04-1.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/05-3.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/06-2.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/07-9.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/08-3.jpg"
+    },
+    {
+      "tipo": "imagem"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/11-2.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/12-2.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/10-3.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/14-3.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/02-03.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/17-2.jpg"
+    }
+  ]
 }
