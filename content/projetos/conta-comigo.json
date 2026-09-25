@@ -1,6 +1,7 @@
 {
   "cliente": "CONTA COMIGO",
-  "titulo": "Branding",
+  "titulo": "identidade visual",
+  "titulo_en": "visual identity",
   "slug": "conta-comigo",
   "ano": "2025",
   "local": "Brasília",
@@ -11,8 +12,8 @@
     {
       "rotulo": "Entregas",
       "rotulo_en": "Deliverables",
-      "valor": "Branding, identidade visual, iconografia, sinalização, aplicações online/offline e social media",
-      "valor_en": "Branding, visual identity, iconography, signage, online/offline applications and social media"
+      "valor": "Identidade visual, iconografia, sinalização, aplicações online/offline e social media",
+      "valor_en": "Visual identity, iconography, signage, online/offline applications and social media"
     }
   ],
   "resumo": "Conta Comigo é um projeto que une pesquisa, conscientização e ação prática para combater a violência contra mulheres em eventos culturais e de entretenimento.\n\nPresente em festivais de todo o Brasil, a marca precisava ser de fácil identificação e, ao mesmo tempo, criar conexão e acolher seu público.",
