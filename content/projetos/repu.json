@@ -18,7 +18,8 @@
   "resumo": "Criada em 2017, a Repu se constrói a partir de diferentes “eras”, onde cada edição explora um novo artista, estética e universo da cultura pop. O desafio foi estruturar um sistema visual capaz de sustentar essa constante transformação e que reforçasse o caráter plural e livre da marca, conectando-se com um público que busca identificação e pertencimento.",
   "blocos": [
     {
-      "tipo": "imagem"
+      "tipo": "imagem",
+      "arquivo": "/media/01.gif"
     },
     {
       "tipo": "imagem",
@@ -49,7 +50,8 @@
       "arquivo": "/media/08-3.jpg"
     },
     {
-      "tipo": "imagem"
+      "tipo": "imagem",
+      "arquivo": "/media/09.gif"
     },
     {
       "tipo": "imagem",
