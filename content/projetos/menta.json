@@ -87,11 +87,18 @@
     {
       "tipo": "imagem",
       "arquivo": "/media/17-1.jpg"
+    }
+  ],
+  "creditos": [
+    {
+      "funcao": "Direção Criativa",
+      "funcao_en": "Creative Direction",
+      "nome": "Isadora Tupinambá"
     },
     {
-      "tipo": "texto",
-      "corpo": "Direção Criativa: Isadora Tupinambá  \nDireção de Arte: Samantha Araújo e Isadora Tupinambá",
-      "corpo_en": "Creative Direction: Isadora Tupinambá  \nArt Direction: Samantha Araújo e Isadora Tupinambá"
+      "funcao": "Direção de Arte",
+      "funcao_en": "Art Direction",
+      "nome": "Samantha Araújo"
     }
   ]
 }
