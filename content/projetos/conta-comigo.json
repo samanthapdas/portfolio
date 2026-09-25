@@ -1,0 +1,19 @@
+{
+  "cliente": "CONTA COMIGO",
+  "titulo": "Branding",
+  "slug": "conta-comigo",
+  "ano": "2025",
+  "local": "Brasília",
+  "ordem": 190,
+  "publicado": true,
+  "capa": "/media/09-3.jpg",
+  "ficha": [
+    {
+      "rotulo": "Entregas",
+      "rotulo_en": "Deliverables",
+      "valor": "Branding, identidade visual, iconografia, sinalização, aplicações online/offline e social media",
+      "valor_en": "Branding, visual identity, iconography, signage, online/offline applications and social media"
+    }
+  ],
+  "resumo": "Conta Comigo é um projeto que integra pesquisa, conscientização e ação prática para erradicar a violência contra mulheres e pessoas em vulnerabilidade em eventos culturais e de entretenimento. Tem como objetivo criar espaços seguros e acolhedores, livres de violência, e garantir que todas possam participar e apreciar experiências culturais sem medo."
+}
