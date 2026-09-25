@@ -1,6 +1,7 @@
 {
   "cliente": "MENTA",
-  "titulo": "Branding",
+  "titulo": "identidade visual",
+  "titulo_en": "visual identity",
   "slug": "menta",
   "ano": "2025",
   "local": "Brasília",
@@ -17,12 +18,12 @@
     {
       "rotulo": "Entregas",
       "rotulo_en": "Deliverables",
-      "valor": "Branding, identidade visual, iconografia, sinalização, aplicações online/offline e social media",
-      "valor_en": "Branding, visual identity, iconography, signage, online/offline applications and social media"
+      "valor": "Identidade visual, iconografia, sinalização, aplicações online/offline e social media",
+      "valor_en": "Visual identity, iconography, signage, online/offline applications and social media"
     }
   ],
   "resumo": "A MENTA é um espaço criativo em Brasília, com atividades como cerâmica, pintura, costura e gastronomia. A proposta era criar uma marca que convidasse a desacelerar, criar com as mãos e estar presente.\n\nA identidade revisita o fazer manual por meio de uma paleta suave e ilustrações orgânicas. Inspiradas nos rituais do espaço, elas se espalham pela sinalização, papelaria, uniformes e comunicação digital, em uma marca sensível, elegante e acolhedora.",
-  "resumo_en": "MENTA is a creative space in Brasília offering activities such as pottery, painting, sewing and cooking. The brand invites people to slow down, create with their hands and be present.  \n  \nThe identity draws on the handmade, with a soft palette and organic illustrations inspired by the studio's everyday rituals. They carry through signage, stationery, uniforms and social media, creating a sensitive, elegant and welcoming brand. ",
+  "resumo_en": "MENTA is a creative space in Brasília offering activities such as pottery, painting, sewing and cooking. The brand invites people to slow down, create with their hands and be present.  \n\nThe identity draws on the handmade, with a soft palette and organic illustrations inspired by the studio's everyday rituals. They carry through signage, stationery, uniforms and social media, creating a sensitive, elegant and welcoming brand. ",
   "blocos": [
     {
       "tipo": "imagem",
