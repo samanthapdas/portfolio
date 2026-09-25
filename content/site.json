@@ -5,7 +5,7 @@
   "hero": "Visual designer com foco em branding e direção de arte para marcas, campanhas e festivais.",
   "hero_en": "Visual designer focused on branding and art direction for brands, campaigns and festivals.",
   "cores": {
-    "fundo": "0041ec",
+    "fundo": "#0041EC",
     "texto": "#FFFFFF",
     "texto_suave": "#B8B8FF",
     "linhas": "#4D4DFF"
