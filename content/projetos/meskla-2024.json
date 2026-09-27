@@ -7,7 +7,7 @@
   "local": "Brasília",
   "ordem": 50,
   "publicado": true,
-  "capa": "/media/01-3.png",
+  "capa": "/media/capamskl24.jpg",
   "blocos": [
     {
       "tipo": "imagem",
@@ -50,7 +50,8 @@
       "arquivo": "/media/10-5.jpg"
     },
     {
-      "tipo": "imagem"
+      "tipo": "imagem",
+      "arquivo": "/media/11.gif"
     },
     {
       "tipo": "imagem",
