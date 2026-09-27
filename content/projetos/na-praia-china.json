@@ -12,7 +12,13 @@
       "rotulo": "Função",
       "rotulo_en": "Role",
       "valor": "Coordenação de Design",
-      "valor_en": "Design Coordination"
+      "valor_en": "Design Lead"
+    },
+    {
+      "rotulo": "Entregas",
+      "rotulo_en": "Deliverables",
+      "valor": "Direção de arte, campanhas online e offline, mídia OOH, cenografia e sinalização",
+      "valor_en": "Art direction, online and offline campaigns, OOH, scenography and signage"
     }
   ],
   "resumo": "O Na Praia Festival cria uma praia no meio de Brasília e, a cada temporada, homenageia um país diferente. A edição de 2024 teve a China como tema e reuniu 350 mil pessoas em 40 noites de shows, com mais de 100 artistas locais e nacionais. Com cerca de três meses de duração, é considerado o maior festival de música em formato de temporada do Brasil e o maior evento lixo zero do mundo.\n\nA comunicação levou a identidade da temporada a todos os pontos de contato do festival: redes sociais, anúncios, mídia exterior pela cidade, cenografia e sinalização do espaço. Símbolos da tradição chinesa, reinterpretados com uma estética contemporânea, ganharam escala e acompanharam o público durante toda a temporada.",
@@ -20,6 +26,63 @@
   "blocos": [
     {
       "tipo": "imagem"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/02.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/04-2.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/05-4.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/06-1.gif"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/07-10.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/08-4.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/09-5.jpg"
+    },
+    {
+      "tipo": "imagem"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/11-3.jpg"
+    },
+    {
+      "tipo": "imagem"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/13-15.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/14-4.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/16-2.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/17-3.jpg"
     }
+  ],
+  "creditos": [
+    {}
   ]
 }
