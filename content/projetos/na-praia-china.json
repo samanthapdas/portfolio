@@ -1,0 +1,25 @@
+{
+  "cliente": "NA PRAIA FESTIVAL - China",
+  "titulo": "Direção de Arte",
+  "titulo_en": "Art Direction",
+  "slug": "na-praia-china",
+  "ano": "2024",
+  "local": "Brasília",
+  "ordem": 80,
+  "publicado": true,
+  "ficha": [
+    {
+      "rotulo": "Função",
+      "rotulo_en": "Role",
+      "valor": "Coordenação de Design",
+      "valor_en": "Design Coordination"
+    }
+  ],
+  "resumo": "O Na Praia Festival cria uma praia no meio de Brasília e, a cada temporada, homenageia um país diferente. A edição de 2024 teve a China como tema e reuniu 350 mil pessoas em 40 noites de shows, com mais de 100 artistas locais e nacionais. Com cerca de três meses de duração, é considerado o maior festival de música em formato de temporada do Brasil e o maior evento lixo zero do mundo.\n\nA comunicação levou a identidade da temporada a todos os pontos de contato do festival: redes sociais, anúncios, mídia exterior pela cidade, cenografia e sinalização do espaço. Símbolos da tradição chinesa, reinterpretados com uma estética contemporânea, ganharam escala e acompanharam o público durante toda a temporada.",
+  "resumo_en": "Na Praia Festival builds a beach in the middle of Brasília, and each season pays tribute to a different country. The 2024 edition was themed around China and drew 350,000 people over 40 nights of shows, featuring more than 100 local and national artists. Running for about three months, it's considered Brazil's largest season-long music festival and the world's largest zero-waste event.\n\nThe communication carried the season's identity across every touchpoint: social media, ads, outdoor media around the city, scenography and on-site signage. Traditional Chinese symbols, reimagined with a contemporary look, were scaled up and stayed with the audience throughout the season.",
+  "blocos": [
+    {
+      "tipo": "imagem"
+    }
+  ]
+}
