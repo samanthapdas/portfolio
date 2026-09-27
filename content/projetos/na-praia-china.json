@@ -7,6 +7,7 @@
   "local": "Brasília",
   "ordem": 80,
   "publicado": true,
+  "capa": "/media/03.jpg",
   "ficha": [
     {
       "rotulo": "Função",
@@ -80,9 +81,30 @@
     {
       "tipo": "imagem",
       "arquivo": "/media/17-3.jpg"
+    },
+    {
+      "tipo": "video",
+      "link": "https://www.youtube.com/watch?v=-NkInJQYL70"
     }
   ],
   "creditos": [
-    {}
+    {
+      "funcao": "Direção Criativa",
+      "funcao_en": "Creative Direction",
+      "nome": "Isadora Tupinambá"
+    },
+    {
+      "funcao": "Coordenação de Design",
+      "funcao_en": "Design Lead",
+      "nome": "Samantha Araújo"
+    },
+    {
+      "funcao": "Motion Design",
+      "nome": "Matheus Rabelo"
+    },
+    {
+      "funcao": "Design",
+      "nome": "Danilo Teixeira"
+    }
   ]
 }
