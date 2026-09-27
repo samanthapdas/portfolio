@@ -1,5 +1,5 @@
 {
-  "cliente": "NA PRAIA FESTIVAL - China",
+  "cliente": "NA PRAIA FESTIVAL / China",
   "titulo": "Direção de Arte",
   "titulo_en": "Art Direction",
   "slug": "na-praia-china",
@@ -59,19 +59,11 @@
     },
     {
       "tipo": "imagem",
-      "arquivo": "/media/08-5.jpg"
-    },
-    {
-      "tipo": "imagem",
       "arquivo": "/media/15-napraiachina.gif"
     },
     {
       "tipo": "imagem",
       "arquivo": "/media/10-4.jpg"
-    },
-    {
-      "tipo": "imagem",
-      "arquivo": "/media/11-4.jpg"
     },
     {
       "tipo": "imagem",
@@ -86,16 +78,14 @@
       "arquivo": "/media/14.png"
     },
     {
-      "tipo": "imagem",
+      "tipo": "video",
+      "link": "https://www.youtube.com/watch?v=-NkInJQYL70",
       "arquivo": "/media/15.png"
     },
     {
       "tipo": "video",
-      "link": "https://www.youtube.com/watch?v=-NkInJQYL70"
-    },
-    {
-      "tipo": "video",
-      "link": "https://www.youtube.com/watch?v=1rvkwxolEYY"
+      "link": "https://www.youtube.com/watch?v=1rvkwxolEYY",
+      "arquivo": "/media/15.png"
     }
   ],
   "creditos": [
