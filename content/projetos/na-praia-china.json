@@ -26,7 +26,8 @@
   "resumo_en": "Na Praia Festival builds a beach in the middle of Brasília, and each season pays tribute to a different country. The 2024 edition was themed around China and drew 350,000 people over 40 nights of shows, featuring more than 100 local and national artists. Running for about three months, it's considered Brazil's largest season-long music festival and the world's largest zero-waste event.\n\nThe communication carried the season's identity across every touchpoint: social media, ads, outdoor media around the city, scenography and on-site signage. Traditional Chinese symbols, reimagined with a contemporary look, were scaled up and stayed with the audience throughout the season.",
   "blocos": [
     {
-      "tipo": "imagem"
+      "tipo": "imagem",
+      "arquivo": "/media/01-napraiachina.gif"
     },
     {
       "tipo": "imagem",
@@ -34,11 +35,7 @@
     },
     {
       "tipo": "imagem",
-      "arquivo": "/media/04-2.jpg"
-    },
-    {
-      "tipo": "imagem",
-      "arquivo": "/media/05-4.jpg"
+      "arquivo": "/media/04-3.jpg"
     },
     {
       "tipo": "imagem",
@@ -57,14 +54,16 @@
       "arquivo": "/media/09-5.jpg"
     },
     {
-      "tipo": "imagem"
+      "tipo": "imagem",
+      "arquivo": "/media/09-5.jpg"
     },
     {
       "tipo": "imagem",
       "arquivo": "/media/11-3.jpg"
     },
     {
-      "tipo": "imagem"
+      "tipo": "imagem",
+      "arquivo": "/media/11-3.jpg"
     },
     {
       "tipo": "imagem",
@@ -84,7 +83,8 @@
     },
     {
       "tipo": "video",
-      "link": "https://www.youtube.com/watch?v=-NkInJQYL70"
+      "link": "https://www.youtube.com/watch?v=-NkInJQYL70",
+      "arquivo": "/media/17-3.jpg"
     },
     {
       "tipo": "video",
