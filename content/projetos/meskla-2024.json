@@ -7,5 +7,93 @@
   "local": "Brasília",
   "ordem": 50,
   "publicado": true,
-  "capa": "/media/01-3.png"
+  "capa": "/media/01-3.png",
+  "blocos": [
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/01-2.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/02-5.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/03-2.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/04-4.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/05-6.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/06-3.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/07-11.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/08-6.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/09-6.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/10-5.jpg"
+    },
+    {
+      "tipo": "imagem"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/12-3.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/13-17.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/14-1.png"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/15-1.png"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/16.png"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/17.png"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/18.png"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/19.png"
+    }
+  ],
+  "creditos": [
+    {
+      "funcao": "Direção Criativa",
+      "funcao_en": "Creative Direction",
+      "nome": "Samantha Araújo"
+    },
+    {
+      "funcao": "Motion Design",
+      "nome": "Matheus Rabelo"
+    }
+  ]
 }
