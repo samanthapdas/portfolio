@@ -31,10 +31,6 @@
     },
     {
       "tipo": "imagem",
-      "arquivo": "/media/b.jpg"
-    },
-    {
-      "tipo": "imagem",
       "arquivo": "/media/c.jpg"
     },
     {
@@ -67,7 +63,7 @@
     },
     {
       "tipo": "imagem",
-      "arquivo": "/media/j.mp4"
+      "arquivo": "/media/b.jpg"
     },
     {
       "tipo": "imagem",
@@ -75,11 +71,11 @@
     },
     {
       "tipo": "imagem",
-      "arquivo": "/media/l.jpg"
+      "arquivo": "/media/m.jpg"
     },
     {
       "tipo": "imagem",
-      "arquivo": "/media/m.jpg"
+      "arquivo": "/media/l.jpg"
     },
     {
       "tipo": "imagem",
@@ -99,7 +95,12 @@
     },
     {
       "tipo": "video",
-      "link": "https://www.youtube.com/watch?v=kgubbyAIPVs"
+      "link": "https://www.youtube.com/watch?v=kgubbyAIPVs",
+      "arquivo": "/media/q.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/j.mp4"
     }
   ],
   "creditos": [
