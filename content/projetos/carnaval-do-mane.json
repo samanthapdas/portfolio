@@ -43,10 +43,6 @@
     },
     {
       "tipo": "imagem",
-      "arquivo": "/media/f.jpg"
-    },
-    {
-      "tipo": "imagem",
       "arquivo": "/media/f.mp4"
     },
     {
@@ -60,6 +56,10 @@
     {
       "tipo": "imagem",
       "arquivo": "/media/i.mp4"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/f.jpg"
     },
     {
       "tipo": "imagem",
