@@ -43,11 +43,7 @@
     },
     {
       "tipo": "imagem",
-      "arquivo": "/media/f.mp4"
-    },
-    {
-      "tipo": "imagem",
-      "arquivo": "/media/g.jpg"
+      "arquivo": "/media/f.jpg"
     },
     {
       "tipo": "imagem",
@@ -59,7 +55,11 @@
     },
     {
       "tipo": "imagem",
-      "arquivo": "/media/f.jpg"
+      "arquivo": "/media/f.mp4"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/g.jpg"
     },
     {
       "tipo": "imagem",
