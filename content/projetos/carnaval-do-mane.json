@@ -1,5 +1,5 @@
 {
-  "cliente": "Carnaval do Mané",
+  "cliente": "CARNAVAL DO MANÉ",
   "titulo": "Direção de Arte",
   "titulo_en": "Art Direction",
   "slug": "carnaval-do-mane",
@@ -26,10 +26,100 @@
   "resumo_en": "Carnaval do Mané turns Arena BRB Mané Garrincha into one of Brasília's biggest Carnival hubs. The 2025 edition featured five days of celebration, two stages and more than 30 national and local acts, from Pabllo Vittar and Gloria Groove to Zé Neto & Cristiano and Ara Ketu, plus a full day dedicated to local artists.\n\nThe visual identity is built around intensity and diversity, reflecting the mix of rhythms that defines the event. Vibrant colors and dynamic compositions create an expressive, flexible system that was rolled out across digital campaigns, social media, outdoor media, scenography and signage.",
   "blocos": [
     {
-      "tipo": "imagem"
+      "tipo": "imagem",
+      "arquivo": "/media/a.mp4"
     },
     {
-      "tipo": "imagem"
+      "tipo": "imagem",
+      "arquivo": "/media/b.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/c.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/d.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/e.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/f.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/f.mp4"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/g.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/h.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/i.mp4"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/j.mp4"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/k.png"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/l.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/m.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/n.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/o.mp4"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/p.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "arquivo": "/media/q.jpg"
+    },
+    {
+      "tipo": "video",
+      "link": "https://www.youtube.com/watch?v=kgubbyAIPVs"
+    }
+  ],
+  "creditos": [
+    {
+      "funcao": "Direção Criativa",
+      "funcao_en": "Creative Direction",
+      "nome": "Isadora Tupinambá"
+    },
+    {
+      "funcao": "Coordenação de Design",
+      "funcao_en": "Design Lead",
+      "nome": "Samantha Araújo"
+    },
+    {
+      "funcao": "Motion Design",
+      "nome": "Matheus Rabelo"
+    },
+    {
+      "funcao": "Design",
+      "nome": "Danilo Teixeira"
     }
   ]
 }
