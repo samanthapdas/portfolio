@@ -63,10 +63,6 @@
     },
     {
       "tipo": "imagem",
-      "arquivo": "/media/b.jpg"
-    },
-    {
-      "tipo": "imagem",
       "arquivo": "/media/k.png"
     },
     {
@@ -91,16 +87,16 @@
     },
     {
       "tipo": "imagem",
+      "arquivo": "/media/r.mp4"
+    },
+    {
+      "tipo": "imagem",
       "arquivo": "/media/q.jpg"
     },
     {
       "tipo": "video",
       "link": "https://www.youtube.com/watch?v=kgubbyAIPVs",
       "arquivo": "/media/q.jpg"
-    },
-    {
-      "tipo": "imagem",
-      "arquivo": "/media/j.mp4"
     }
   ],
   "creditos": [
