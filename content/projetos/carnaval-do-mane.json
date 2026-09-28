@@ -1,0 +1,35 @@
+{
+  "cliente": "Carnaval do Mané",
+  "titulo": "Direção de Arte",
+  "titulo_en": "Art Direction",
+  "slug": "carnaval-do-mane",
+  "ano": "2025",
+  "local": "Brasília",
+  "ordem": 100,
+  "publicado": true,
+  "capa": "/media/capa-carnaval.jpg",
+  "ficha": [
+    {
+      "rotulo": "Função",
+      "rotulo_en": "Role",
+      "valor": "Coordenação de Design",
+      "valor_en": "Design Lead"
+    },
+    {
+      "rotulo": "Entregas",
+      "rotulo_en": "Deliverables",
+      "valor": "Desdobramento da identidade visual, campanhas digitais, social media, mídia OOH, cenografia e sinalização",
+      "valor_en": "Identity rollout, digital campaigns, social media, OOH, scenography and signage"
+    }
+  ],
+  "resumo": "O Carnaval do Mané transforma a Arena BRB Mané Garrincha em um dos maiores pontos de folia de Brasília. Em 2025, foram cinco dias de festa, dois palcos e mais de 30 atrações nacionais e locais, de Pabllo Vittar e Gloria Groove a Zé Neto & Cristiano e Ara Ketu, além de um dia dedicado só a artistas da cidade.\n\nA identidade visual parte da ideia de intensidade e diversidade, refletindo a mistura de ritmos que define o evento. Cores vibrantes e composições dinâmicas formam um sistema expressivo e flexível, que se desdobrou em campanhas digitais, redes sociais, mídia exterior, cenografia e sinalização.",
+  "resumo_en": "Carnaval do Mané turns Arena BRB Mané Garrincha into one of Brasília's biggest Carnival hubs. The 2025 edition featured five days of celebration, two stages and more than 30 national and local acts, from Pabllo Vittar and Gloria Groove to Zé Neto & Cristiano and Ara Ketu, plus a full day dedicated to local artists.\n\nThe visual identity is built around intensity and diversity, reflecting the mix of rhythms that defines the event. Vibrant colors and dynamic compositions create an expressive, flexible system that was rolled out across digital campaigns, social media, outdoor media, scenography and signage.",
+  "blocos": [
+    {
+      "tipo": "imagem"
+    },
+    {
+      "tipo": "imagem"
+    }
+  ]
+}
