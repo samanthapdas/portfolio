@@ -55,13 +55,27 @@
         ]
       },
       {
-        "titulo": "Faço",
+        "titulo": "Serviços",
+        "titulo_en": "Services",
         "itens": [
-          "Identidade visual",
-          "Comunicação para eventos",
-          "Festivais e projetos culturais",
-          "Direção de arte de campanha",
-          "Ativações e brindes"
+          "Direção de arte",
+          "Branding e Identidade de marca",
+          "Design para eventos",
+          "Campanhas",
+          "Identidade para casamentos",
+          "Social media",
+          "Design editorial",
+          "Packaging"
+        ],
+        "itens_en": [
+          "Art direction",
+          "Brand identity",
+          "Event design",
+          "Campaigns",
+          "Wedding identity",
+          "Social media",
+          "Editorial design",
+          "Packaging"
         ]
       },
       {
